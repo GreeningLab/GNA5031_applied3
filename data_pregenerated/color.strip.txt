@@ -1,0 +1,591 @@
+DATASET_COLORSTRIP
+#In colored strip datasets, each ID is associated to a color box/strip and can have an optional label. Color can be specified in hexadecimal, RGB or RGBA notation. When using RGB or RGBA notation, you cannot use COMMA as the dataset separator
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file (except in the SEPARATOR line, which uses space).
+
+#SEPARATOR TAB
+#SEPARATOR COMMA
+SEPARATOR SPACE
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL Geological_Regions
+
+#dataset color (can be changed later)
+COLOR #ff0000
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#If COLOR_BRANCHES is set to 1, branches of the tree will be colored according to the colors of the strips above the leaves.
+#When all children of a node have the same color, it will be colored the same, ie. the color will propagate inwards towards the root.
+COLOR_BRANCHES 0
+
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#Each dataset can have a legend, which is defined using LEGEND_XXX fields below
+#For each row in the legend, there should be one shape, color and label.
+#Optionally, you can define an exact legend position using LEGEND_POSITION_X and LEGEND_POSITION_Y. To use automatic legend positioning, do NOT define these values
+#Optionally, shape scaling can be present (LEGEND_SHAPE_SCALES). For each shape, you can define a scaling factor between 0 and 1.
+#Shape should be a number between 1 and 6, or any protein domain shape definition.
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+LEGEND_TITLE GeologicalRegions
+LEGEND_POSITION_X 100
+LEGEND_POSITION_Y 100
+LEGEND_SHAPES 1 1 1 1 1 1 1
+LEGEND_COLORS rgba(104,2,63,0.7) rgba(192,11,111,0.7) rgba(255,149,186,0.7) rgba(89,10,135,0.7) rgba(0,99,229,0.7) rgba(0,199,249,0.7) rgba(255,215,0,0.7)
+LEGEND_LABELS North_America Asia South_America Europe Africa Oceania Samples
+LEGEND_SHAPE_SCALES 1 1 1 1 1 1 1
+
+#width of the colored strip
+STRIP_WIDTH 70
+
+#left margin, used to increase/decrease the spacing to the next dataset. Can be negative, causing datasets to overlap.
+#MARGIN 0
+
+#border width; if set above 0, a border of specified width (in pixels) will be drawn around the color strip
+#BORDER_WIDTH 0
+
+#border color; used when BORDER_WIDTH is above 0
+#BORDER_COLOR #0000ff
+
+#always show internal values; if set, values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL 0
+
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+
+#Examples:
+#assign a red colored strip to leaf 9606, with label 'Human' (label is displayed in the mouseover popups)
+#9606 #ff0000 Human
+#CS1 #ff0000 This study
+#MW001922.1 rgba(0,255,0,0.7) North America
+
+#assign a green, semi-transparent (alpha 0.7) strip to an internal node, without any label. If 'Show internal values' is set to 'No', this will only be displayed if the node is collapsed.
+#9606|5664 rgba(0,255,0,0.7)
+MW240742.1 rgba(104,2,63,0.7) North America
+MT981449.1 rgba(104,2,63,0.7) North America
+MW031050.1 rgba(104,2,63,0.7) North America
+MT969456.1 rgba(0,199,249,0.7) Oceania
+MT956790.1 rgba(104,2,63,0.7) North America
+MT642424.1 rgba(104,2,63,0.7) North America
+MW190925.1 rgba(104,2,63,0.7) North America
+MW181747.1 rgba(192,11,111,0.7) Asia
+MW185575.1 rgba(0,199,249,0.7) Oceania
+MN975262.1 rgba(192,11,111,0.7) Asia
+MW206104.1 rgba(104,2,63,0.7) North America
+MT971811.1 rgba(0,199,249,0.7) Oceania
+MT416725.2 rgba(192,11,111,0.7) Asia
+MT520253.1 rgba(104,2,63,0.7) North America
+MW454744.1 rgba(104,2,63,0.7) North America
+MT745682.1 rgba(0,199,249,0.7) Oceania
+MW035520.1 rgba(104,2,63,0.7) North America
+MT831666.1 rgba(104,2,63,0.7) North America
+MW190576.1 rgba(104,2,63,0.7) North America
+MW153208.1 rgba(0,199,249,0.7) Oceania
+MW420145.1 rgba(104,2,63,0.7) North America
+MT607615.1 rgba(192,11,111,0.7) Asia
+MW424977.1 rgba(104,2,63,0.7) North America
+MT821621.1 rgba(104,2,63,0.7) North America
+MW153546.1 rgba(0,199,249,0.7) Oceania
+MW420347.1 rgba(104,2,63,0.7) North America
+MT969547.1 rgba(0,199,249,0.7) Oceania
+MT947168.1 rgba(0,99,229,0.7) Africa
+MT598636.1 rgba(104,2,63,0.7) North America
+MW155823.1 rgba(0,199,249,0.7) Oceania
+MW185399.1 rgba(0,199,249,0.7) Oceania
+MW454694.1 rgba(104,2,63,0.7) North America
+MW276259.1 rgba(104,2,63,0.7) North America
+MW306355.1 rgba(104,2,63,0.7) North America
+MW206015.1 rgba(104,2,63,0.7) North America
+MT482118.1 rgba(104,2,63,0.7) North America
+MT834311.1 rgba(104,2,63,0.7) North America
+MW420435.1 rgba(104,2,63,0.7) North America
+MW191114.1 rgba(104,2,63,0.7) North America
+MT846415.1 rgba(104,2,63,0.7) North America
+MW338796.1 rgba(104,2,63,0.7) North America
+MT044258.1 rgba(104,2,63,0.7) North America
+MT972377.1 rgba(0,199,249,0.7) Oceania
+MT969388.1 rgba(0,199,249,0.7) Oceania
+MW184767.1 rgba(0,199,249,0.7) Oceania
+MW155080.1 rgba(0,199,249,0.7) Oceania
+MW406681.1 rgba(104,2,63,0.7) North America
+MT614599.1 rgba(0,99,229,0.7) Africa
+MT611449.1 rgba(0,99,229,0.7) Africa
+MT666099.1 rgba(192,11,111,0.7) Asia
+MT576040.1 rgba(192,11,111,0.7) Asia
+MT971997.1 rgba(0,199,249,0.7) Oceania
+MT952650.1 rgba(104,2,63,0.7) North America
+MT642295.1 rgba(104,2,63,0.7) North America
+MW184235.1 rgba(0,199,249,0.7) Oceania
+MT535509.1 rgba(104,2,63,0.7) North America
+MT628268.1 rgba(104,2,63,0.7) North America
+MW065379.1 rgba(104,2,63,0.7) North America
+MW332862.1 rgba(104,2,63,0.7) North America
+MW006583.1 rgba(104,2,63,0.7) North America
+MW153822.1 rgba(0,199,249,0.7) Oceania
+MT114419.1 rgba(192,11,111,0.7) Asia
+MT997768.1 rgba(104,2,63,0.7) North America
+MW403679.1 rgba(104,2,63,0.7) North America
+MT232693.1 rgba(192,11,111,0.7) Asia
+MT970078.1 rgba(0,199,249,0.7) Oceania
+MT539176.1 rgba(192,11,111,0.7) Asia
+MT846545.1 rgba(104,2,63,0.7) North America
+MW341928.1 rgba(104,2,63,0.7) North America
+MW390860.1 rgba(104,2,63,0.7) North America
+MW184327.1 rgba(0,199,249,0.7) Oceania
+MT913140.1 rgba(104,2,63,0.7) North America
+MT791940.1 rgba(104,2,63,0.7) North America
+MW390850.1 rgba(104,2,63,0.7) North America
+MW154281.1 rgba(0,199,249,0.7) Oceania
+MW421973.1 rgba(104,2,63,0.7) North America
+MW273839.1 rgba(89,10,135,0.7) Europe
+MT641554.1 rgba(104,2,63,0.7) North America
+MW184486.1 rgba(0,199,249,0.7) Oceania
+MT971313.1 rgba(0,199,249,0.7) Oceania
+MW035416.1 rgba(104,2,63,0.7) North America
+MT890296.1 rgba(104,2,63,0.7) North America
+MW266954.1 rgba(89,10,135,0.7) Europe
+MW153406.1 rgba(0,199,249,0.7) Oceania
+MW064874.1 rgba(104,2,63,0.7) North America
+MT679170.1 rgba(104,2,63,0.7) North America
+MT873384.1 rgba(104,2,63,0.7) North America
+MT971556.1 rgba(0,199,249,0.7) Oceania
+MW237767.1 rgba(192,11,111,0.7) Asia
+MW157070.1 rgba(0,199,249,0.7) Oceania
+MW048999.1 rgba(104,2,63,0.7) North America
+MW277193.1 rgba(0,199,249,0.7) Oceania
+MT873347.1 rgba(104,2,63,0.7) North America
+MW064653.1 rgba(104,2,63,0.7) North America
+MT831783.1 rgba(104,2,63,0.7) North America
+MW191164.1 rgba(104,2,63,0.7) North America
+MW349040.1 rgba(104,2,63,0.7) North America
+MT821622.1 rgba(104,2,63,0.7) North America
+MT627752.1 rgba(104,2,63,0.7) North America
+MW320879.1 rgba(0,199,249,0.7) Oceania
+MT467258.1 rgba(192,11,111,0.7) Asia
+MW343760.1 rgba(104,2,63,0.7) North America
+MW064358.1 rgba(104,2,63,0.7) North America
+MW185679.1 rgba(0,199,249,0.7) Oceania
+MT450892.1 rgba(104,2,63,0.7) North America
+MT969450.1 rgba(0,199,249,0.7) Oceania
+MW420182.1 rgba(104,2,63,0.7) North America
+MT972272.1 rgba(0,199,249,0.7) Oceania
+MT994937.1 rgba(0,99,229,0.7) Africa
+MT834154.1 rgba(104,2,63,0.7) North America
+MT764181.1 rgba(104,2,63,0.7) North America
+MW075756.1 rgba(104,2,63,0.7) North America
+MW341827.1 rgba(104,2,63,0.7) North America
+MT956916.1 rgba(89,10,135,0.7) Europe
+MW153422.1 rgba(0,199,249,0.7) Oceania
+MW206199.1 rgba(104,2,63,0.7) North America
+MT658507.1 rgba(0,99,229,0.7) Africa
+MW156652.1 rgba(0,199,249,0.7) Oceania
+MT750100.1 rgba(104,2,63,0.7) North America
+MW321404.1 rgba(0,199,249,0.7) Oceania
+MT450887.1 rgba(104,2,63,0.7) North America
+MW190449.1 rgba(104,2,63,0.7) North America
+MT632856.1 rgba(104,2,63,0.7) North America
+MT325611.1 rgba(104,2,63,0.7) North America
+MW070045.1 rgba(104,2,63,0.7) North America
+MW064751.1 rgba(104,2,63,0.7) North America
+MW190542.1 rgba(104,2,63,0.7) North America
+MT969366.1 rgba(0,199,249,0.7) Oceania
+MW154073.1 rgba(0,199,249,0.7) Oceania
+MW321107.1 rgba(0,199,249,0.7) Oceania
+MT232694.1 rgba(192,11,111,0.7) Asia
+MT873391.1 rgba(104,2,63,0.7) North America
+MW266940.1 rgba(89,10,135,0.7) Europe
+MW154010.1 rgba(0,199,249,0.7) Oceania
+MW190882.1 rgba(104,2,63,0.7) North America
+MW191145.1 rgba(104,2,63,0.7) North America
+MT811551.1 rgba(192,11,111,0.7) Asia
+MW190268.1 rgba(104,2,63,0.7) North America
+MT971371.1 rgba(0,199,249,0.7) Oceania
+MW155220.1 rgba(0,199,249,0.7) Oceania
+MT628211.1 rgba(104,2,63,0.7) North America
+MW156990.1 rgba(0,199,249,0.7) Oceania
+MW454518.1 rgba(104,2,63,0.7) North America
+MT846667.1 rgba(104,2,63,0.7) North America
+MW332779.1 rgba(104,2,63,0.7) North America
+MW184915.1 rgba(0,199,249,0.7) Oceania
+MW001274.1 rgba(104,2,63,0.7) North America
+MW184739.1 rgba(0,199,249,0.7) Oceania
+MT834111.1 rgba(104,2,63,0.7) North America
+MW454464.1 rgba(104,2,63,0.7) North America
+MT470152.1 rgba(89,10,135,0.7) Europe
+MT831852.1 rgba(104,2,63,0.7) North America
+MT971210.1 rgba(0,199,249,0.7) Oceania
+MT642094.1 rgba(104,2,63,0.7) North America
+MT972634.1 rgba(0,199,249,0.7) Oceania
+MT811318.1 rgba(104,2,63,0.7) North America
+MT952134.1 rgba(104,2,63,0.7) North America
+MT246488.1 rgba(104,2,63,0.7) North America
+MW454399.1 rgba(104,2,63,0.7) North America
+MW206583.1 rgba(104,2,63,0.7) North America
+MW184775.1 rgba(0,199,249,0.7) Oceania
+MT970250.1 rgba(0,199,249,0.7) Oceania
+MT772554.1 rgba(104,2,63,0.7) North America
+MW277395.1 rgba(0,199,249,0.7) Oceania
+MT929007.1 rgba(104,2,63,0.7) North America
+MW292633.1 rgba(104,2,63,0.7) North America
+MW276495.1 rgba(104,2,63,0.7) North America
+MT438746.1 rgba(104,2,63,0.7) North America
+MT477859.1 rgba(104,2,63,0.7) North America
+MW420179.1 rgba(104,2,63,0.7) North America
+MW341861.1 rgba(104,2,63,0.7) North America
+MW064778.1 rgba(104,2,63,0.7) North America
+MT706323.1 rgba(104,2,63,0.7) North America
+MT758314.1 rgba(192,11,111,0.7) Asia
+MT971539.1 rgba(0,199,249,0.7) Oceania
+MT969623.1 rgba(0,199,249,0.7) Oceania
+MT886300.1 rgba(104,2,63,0.7) North America
+MW183982.1 rgba(0,199,249,0.7) Oceania
+MT940488.1 rgba(192,11,111,0.7) Asia
+MW405473.1 rgba(104,2,63,0.7) North America
+MT886368.1 rgba(104,2,63,0.7) North America
+MT582498.1 rgba(89,10,135,0.7) Europe
+MT969897.1 rgba(0,199,249,0.7) Oceania
+MT831738.1 rgba(104,2,63,0.7) North America
+MW070109.1 rgba(104,2,63,0.7) North America
+MT632521.1 rgba(104,2,63,0.7) North America
+MW155424.1 rgba(0,199,249,0.7) Oceania
+MW011766.1 rgba(192,11,111,0.7) Asia
+MW420339.1 rgba(104,2,63,0.7) North America
+MW462671.1 rgba(104,2,63,0.7) North America
+MT844034.1 rgba(104,2,63,0.7) North America
+MT821550.1 rgba(104,2,63,0.7) North America
+MT706281.1 rgba(104,2,63,0.7) North America
+MT811414.1 rgba(104,2,63,0.7) North America
+MT970961.1 rgba(0,199,249,0.7) Oceania
+MW153038.1 rgba(0,199,249,0.7) Oceania
+MT972256.1 rgba(0,199,249,0.7) Oceania
+MW001922.1 rgba(104,2,63,0.7) North America
+MT877418.1 rgba(104,2,63,0.7) North America
+MW031078.1 rgba(104,2,63,0.7) North America
+MT971264.1 rgba(0,199,249,0.7) Oceania
+MW153771.1 rgba(0,199,249,0.7) Oceania
+MT872494.1 rgba(0,99,229,0.7) Africa
+MW064476.1 rgba(104,2,63,0.7) North America
+MT969951.1 rgba(0,199,249,0.7) Oceania
+MW064716.1 rgba(104,2,63,0.7) North America
+MW273830.1 rgba(89,10,135,0.7) Europe
+MW030229.1 rgba(255,149,186,0.7) South America
+MW165854.1 rgba(192,11,111,0.7) Asia
+MT873473.1 rgba(104,2,63,0.7) North America
+MT326117.1 rgba(104,2,63,0.7) North America
+MW030217.1 rgba(255,149,186,0.7) South America
+MW449438.1 rgba(104,2,63,0.7) North America
+MW420900.1 rgba(104,2,63,0.7) North America
+MT833977.1 rgba(104,2,63,0.7) North America
+MT970467.1 rgba(0,199,249,0.7) Oceania
+MW280450.1 rgba(104,2,63,0.7) North America
+MW035553.1 rgba(104,2,63,0.7) North America
+MT512415.1 rgba(104,2,63,0.7) North America
+MW184860.1 rgba(0,199,249,0.7) Oceania
+MW154732.1 rgba(0,199,249,0.7) Oceania
+MT477848.1 rgba(104,2,63,0.7) North America
+MW155959.1 rgba(0,199,249,0.7) Oceania
+MW190419.1 rgba(104,2,63,0.7) North America
+MW155065.1 rgba(0,199,249,0.7) Oceania
+MW320838.1 rgba(0,199,249,0.7) Oceania
+MT632925.1 rgba(104,2,63,0.7) North America
+MT970837.1 rgba(0,199,249,0.7) Oceania
+MW185450.1 rgba(0,199,249,0.7) Oceania
+MT967931.1 rgba(104,2,63,0.7) North America
+MT706236.1 rgba(104,2,63,0.7) North America
+MT252816.1 rgba(104,2,63,0.7) North America
+MT969694.1 rgba(0,199,249,0.7) Oceania
+MT642247.1 rgba(104,2,63,0.7) North America
+MT451007.1 rgba(0,199,249,0.7) Oceania
+MT520333.1 rgba(104,2,63,0.7) North America
+MW155391.1 rgba(0,199,249,0.7) Oceania
+MW190369.1 rgba(104,2,63,0.7) North America
+MT972095.1 rgba(0,199,249,0.7) Oceania
+MW206291.1 rgba(104,2,63,0.7) North America
+MT496984.1 rgba(192,11,111,0.7) Asia
+MT972976.1 rgba(0,199,249,0.7) Oceania
+MT831627.1 rgba(104,2,63,0.7) North America
+MT439316.1 rgba(104,2,63,0.7) North America
+MT886328.1 rgba(104,2,63,0.7) North America
+MW206149.1 rgba(104,2,63,0.7) North America
+MT970823.1 rgba(0,199,249,0.7) Oceania
+MT704122.1 rgba(104,2,63,0.7) North America
+MW064906.1 rgba(104,2,63,0.7) North America
+MT920000.1 rgba(104,2,63,0.7) North America
+MW156220.1 rgba(0,199,249,0.7) Oceania
+MT482125.1 rgba(104,2,63,0.7) North America
+MW064994.1 rgba(104,2,63,0.7) North America
+MT706386.1 rgba(104,2,63,0.7) North America
+MW454596.1 rgba(104,2,63,0.7) North America
+MW276388.1 rgba(104,2,63,0.7) North America
+MW276301.1 rgba(104,2,63,0.7) North America
+MT439265.1 rgba(104,2,63,0.7) North America
+MT434802.1 rgba(104,2,63,0.7) North America
+MW430989.1 rgba(104,2,63,0.7) North America
+MT706437.1 rgba(104,2,63,0.7) North America
+MT576644.1 rgba(192,11,111,0.7) Asia
+MW403678.1 rgba(104,2,63,0.7) North America
+MT873438.1 rgba(104,2,63,0.7) North America
+MT470127.1 rgba(89,10,135,0.7) Europe
+MT627259.1 rgba(104,2,63,0.7) North America
+MW153846.1 rgba(0,199,249,0.7) Oceania
+MT252806.1 rgba(104,2,63,0.7) North America
+MT970209.1 rgba(0,199,249,0.7) Oceania
+MW338776.1 rgba(104,2,63,0.7) North America
+MT928962.1 rgba(104,2,63,0.7) North America
+MT598639.1 rgba(104,2,63,0.7) North America
+MW156042.1 rgba(0,199,249,0.7) Oceania
+MW184111.1 rgba(0,199,249,0.7) Oceania
+MT791895.1 rgba(104,2,63,0.7) North America
+MT757006.1 rgba(104,2,63,0.7) North America
+MW155287.1 rgba(0,199,249,0.7) Oceania
+MT627746.1 rgba(104,2,63,0.7) North America
+MT834617.1 rgba(104,2,63,0.7) North America
+MT772550.1 rgba(104,2,63,0.7) North America
+MW065006.1 rgba(104,2,63,0.7) North America
+MT253703.1 rgba(192,11,111,0.7) Asia
+MT970734.1 rgba(0,199,249,0.7) Oceania
+MT632516.1 rgba(104,2,63,0.7) North America
+MW446228.1 rgba(104,2,63,0.7) North America
+MT253707.1 rgba(192,11,111,0.7) Asia
+MT951973.1 rgba(104,2,63,0.7) North America
+MT971343.1 rgba(0,199,249,0.7) Oceania
+MW343786.1 rgba(104,2,63,0.7) North America
+MW065447.1 rgba(104,2,63,0.7) North America
+MT322422.1 rgba(104,2,63,0.7) North America
+MT451597.1 rgba(0,199,249,0.7) Oceania
+MW001262.1 rgba(104,2,63,0.7) North America
+MW157063.1 rgba(0,199,249,0.7) Oceania
+MW449339.1 rgba(104,2,63,0.7) North America
+MT969374.1 rgba(0,199,249,0.7) Oceania
+MT834246.1 rgba(104,2,63,0.7) North America
+MT846631.1 rgba(104,2,63,0.7) North America
+MT970382.1 rgba(0,199,249,0.7) Oceania
+MT956687.1 rgba(104,2,63,0.7) North America
+MW156802.1 rgba(0,199,249,0.7) Oceania
+MW153233.1 rgba(0,199,249,0.7) Oceania
+MT843297.1 rgba(104,2,63,0.7) North America
+MW273787.1 rgba(89,10,135,0.7) Europe
+MT873385.1 rgba(104,2,63,0.7) North America
+MW190246.1 rgba(104,2,63,0.7) North America
+MW276519.1 rgba(104,2,63,0.7) North America
+MW240756.1 rgba(104,2,63,0.7) North America
+MW277093.1 rgba(0,199,249,0.7) Oceania
+MT969852.1 rgba(0,199,249,0.7) Oceania
+MT905431.1 rgba(0,99,229,0.7) Africa
+MT614598.1 rgba(0,99,229,0.7) Africa
+MT920007.1 rgba(104,2,63,0.7) North America
+MW153119.1 rgba(0,199,249,0.7) Oceania
+MT811569.1 rgba(192,11,111,0.7) Asia
+MT745668.1 rgba(0,199,249,0.7) Oceania
+MT966104.1 rgba(104,2,63,0.7) North America
+MT434804.1 rgba(104,2,63,0.7) North America
+MW052650.1 rgba(104,2,63,0.7) North America
+MT461653.1 rgba(104,2,63,0.7) North America
+MW154435.1 rgba(0,199,249,0.7) Oceania
+MT772552.1 rgba(104,2,63,0.7) North America
+MW390854.1 rgba(104,2,63,0.7) North America
+MW067707.1 rgba(104,2,63,0.7) North America
+MT834021.1 rgba(104,2,63,0.7) North America
+MW155534.1 rgba(0,199,249,0.7) Oceania
+MT971475.1 rgba(0,199,249,0.7) Oceania
+MT951393.1 rgba(192,11,111,0.7) Asia
+MT259264.1 rgba(104,2,63,0.7) North America
+MT750061.1 rgba(104,2,63,0.7) North America
+MW184796.1 rgba(0,199,249,0.7) Oceania
+MW064450.1 rgba(104,2,63,0.7) North America
+MT831599.1 rgba(104,2,63,0.7) North America
+MT520459.1 rgba(104,2,63,0.7) North America
+MT325576.1 rgba(104,2,63,0.7) North America
+MW185180.1 rgba(0,199,249,0.7) Oceania
+MW341793.1 rgba(104,2,63,0.7) North America
+MT628039.1 rgba(104,2,63,0.7) North America
+MT810821.1 rgba(104,2,63,0.7) North America
+MW155785.1 rgba(0,199,249,0.7) Oceania
+MT846636.1 rgba(104,2,63,0.7) North America
+MW276830.1 rgba(0,199,249,0.7) Oceania
+MT259284.1 rgba(104,2,63,0.7) North America
+MT973353.1 rgba(0,199,249,0.7) Oceania
+MT506571.1 rgba(104,2,63,0.7) North America
+MW277146.1 rgba(0,199,249,0.7) Oceania
+MT882319.1 rgba(104,2,63,0.7) North America
+MW156679.1 rgba(0,199,249,0.7) Oceania
+MT801004.1 rgba(192,11,111,0.7) Asia
+MW228221.1 rgba(104,2,63,0.7) North America
+MT970338.1 rgba(0,199,249,0.7) Oceania
+MT577013.1 rgba(192,11,111,0.7) Asia
+MW446837.1 rgba(104,2,63,0.7) North America
+MW035943.1 rgba(104,2,63,0.7) North America
+MT831175.1 rgba(104,2,63,0.7) North America
+MW064477.1 rgba(104,2,63,0.7) North America
+MW306387.1 rgba(104,2,63,0.7) North America
+MW276942.1 rgba(0,199,249,0.7) Oceania
+MT856679.1 rgba(104,2,63,0.7) North America
+MW065279.1 rgba(104,2,63,0.7) North America
+MW157127.1 rgba(0,199,249,0.7) Oceania
+MT534331.1 rgba(104,2,63,0.7) North America
+MW420681.1 rgba(104,2,63,0.7) North America
+MW184496.1 rgba(0,199,249,0.7) Oceania
+MT641500.1 rgba(104,2,63,0.7) North America
+MW006590.1 rgba(104,2,63,0.7) North America
+MW065462.1 rgba(104,2,63,0.7) North America
+MT834308.1 rgba(104,2,63,0.7) North America
+MT971322.1 rgba(0,199,249,0.7) Oceania
+MT506893.1 rgba(104,2,63,0.7) North America
+MW154476.1 rgba(0,199,249,0.7) Oceania
+MT873109.1 rgba(104,2,63,0.7) North America
+MT972483.1 rgba(0,199,249,0.7) Oceania
+MW411875.1 rgba(104,2,63,0.7) North America
+MT970981.1 rgba(0,199,249,0.7) Oceania
+MW190566.1 rgba(104,2,63,0.7) North America
+MW155414.1 rgba(0,199,249,0.7) Oceania
+MT757085.1 rgba(104,2,63,0.7) North America
+MT831359.1 rgba(104,2,63,0.7) North America
+MT706310.1 rgba(104,2,63,0.7) North America
+MT810716.1 rgba(104,2,63,0.7) North America
+MT632548.1 rgba(104,2,63,0.7) North America
+MW454500.1 rgba(104,2,63,0.7) North America
+MW154363.1 rgba(0,199,249,0.7) Oceania
+MT628272.1 rgba(104,2,63,0.7) North America
+MT745669.1 rgba(0,199,249,0.7) Oceania
+MW154809.1 rgba(0,199,249,0.7) Oceania
+MT821552.1 rgba(104,2,63,0.7) North America
+MW153621.1 rgba(0,199,249,0.7) Oceania
+MT704114.1 rgba(104,2,63,0.7) North America
+MW155285.1 rgba(0,199,249,0.7) Oceania
+MT520369.1 rgba(104,2,63,0.7) North America
+MT831662.1 rgba(104,2,63,0.7) North America
+MT627614.1 rgba(104,2,63,0.7) North America
+MW332658.1 rgba(104,2,63,0.7) North America
+MT560704.1 rgba(192,11,111,0.7) Asia
+MT750491.1 rgba(104,2,63,0.7) North America
+MT956784.1 rgba(104,2,63,0.7) North America
+MW276474.1 rgba(104,2,63,0.7) North America
+MT831314.1 rgba(104,2,63,0.7) North America
+MW332753.1 rgba(104,2,63,0.7) North America
+MW184206.1 rgba(0,199,249,0.7) Oceania
+MT940509.1 rgba(104,2,63,0.7) North America
+MT558647.1 rgba(104,2,63,0.7) North America
+MT831751.1 rgba(104,2,63,0.7) North America
+MT641543.1 rgba(104,2,63,0.7) North America
+MT810606.1 rgba(104,2,63,0.7) North America
+MT263426.1 rgba(104,2,63,0.7) North America
+MT968064.1 rgba(104,2,63,0.7) North America
+MW197470.1 rgba(104,2,63,0.7) North America
+MT506668.1 rgba(104,2,63,0.7) North America
+MT872495.1 rgba(0,99,229,0.7) Africa
+MW403702.1 rgba(89,10,135,0.7) Europe
+MT499217.1 rgba(0,99,229,0.7) Africa
+MT412297.1 rgba(104,2,63,0.7) North America
+MW276663.1 rgba(104,2,63,0.7) North America
+MW172742.1 rgba(104,2,63,0.7) North America
+MW327522.1 rgba(89,10,135,0.7) Europe
+MT972324.1 rgba(0,199,249,0.7) Oceania
+MT612154.1 rgba(0,199,249,0.7) Oceania
+MW185357.1 rgba(0,199,249,0.7) Oceania
+MT972069.1 rgba(0,199,249,0.7) Oceania
+MT970989.1 rgba(0,199,249,0.7) Oceania
+MT786798.1 rgba(104,2,63,0.7) North America
+MT739451.1 rgba(104,2,63,0.7) North America
+MW454591.1 rgba(104,2,63,0.7) North America
+MT263446.1 rgba(104,2,63,0.7) North America
+MT877320.1 rgba(104,2,63,0.7) North America
+MW276446.1 rgba(104,2,63,0.7) North America
+MT412332.1 rgba(104,2,63,0.7) North America
+MW277208.1 rgba(0,199,249,0.7) Oceania
+MW153483.1 rgba(0,199,249,0.7) Oceania
+MW454572.1 rgba(104,2,63,0.7) North America
+MW454669.1 rgba(104,2,63,0.7) North America
+MT511074.1 rgba(89,10,135,0.7) Europe
+MT706247.1 rgba(104,2,63,0.7) North America
+MW154096.1 rgba(0,199,249,0.7) Oceania
+MT450901.1 rgba(104,2,63,0.7) North America
+MT971257.1 rgba(0,199,249,0.7) Oceania
+MW156773.1 rgba(0,199,249,0.7) Oceania
+MT740476.1 rgba(192,11,111,0.7) Asia
+MW279331.1 rgba(104,2,63,0.7) North America
+MW036017.1 rgba(104,2,63,0.7) North America
+MW338769.1 rgba(104,2,63,0.7) North America
+MT496974.1 rgba(192,11,111,0.7) Asia
+MW065186.1 rgba(104,2,63,0.7) North America
+MT797764.1 rgba(104,2,63,0.7) North America
+MW345270.1 rgba(104,2,63,0.7) North America
+MT972923.1 rgba(0,199,249,0.7) Oceania
+MT834003.1 rgba(104,2,63,0.7) North America
+MW184983.1 rgba(0,199,249,0.7) Oceania
+MT973125.1 rgba(0,199,249,0.7) Oceania
+MT581434.1 rgba(192,11,111,0.7) Asia
+MW065327.1 rgba(104,2,63,0.7) North America
+MT325579.1 rgba(104,2,63,0.7) North America
+MT642426.1 rgba(104,2,63,0.7) North America
+MW454686.1 rgba(104,2,63,0.7) North America
+MW190677.1 rgba(104,2,63,0.7) North America
+MT971267.1 rgba(0,199,249,0.7) Oceania
+MW191332.1 rgba(104,2,63,0.7) North America
+MW156455.1 rgba(0,199,249,0.7) Oceania
+MT972657.1 rgba(0,199,249,0.7) Oceania
+MW154762.1 rgba(0,199,249,0.7) Oceania
+MT641679.1 rgba(0,199,249,0.7) Oceania
+MT971994.1 rgba(0,199,249,0.7) Oceania
+MT831216.1 rgba(104,2,63,0.7) North America
+MW154258.1 rgba(0,199,249,0.7) Oceania
+MW155190.1 rgba(0,199,249,0.7) Oceania
+MT873268.1 rgba(104,2,63,0.7) North America
+MT511072.1 rgba(89,10,135,0.7) Europe
+MT973115.1 rgba(0,199,249,0.7) Oceania
+MW155774.1 rgba(0,199,249,0.7) Oceania
+MT704022.1 rgba(104,2,63,0.7) North America
+MT642399.1 rgba(104,2,63,0.7) North America
+MT972647.1 rgba(0,199,249,0.7) Oceania
+MT750348.1 rgba(104,2,63,0.7) North America
+MT971093.1 rgba(0,199,249,0.7) Oceania
+MW343752.1 rgba(104,2,63,0.7) North America
+MW190975.1 rgba(104,2,63,0.7) North America
+MT886341.1 rgba(104,2,63,0.7) North America
+MT831258.1 rgba(104,2,63,0.7) North America
+MW154524.1 rgba(0,199,249,0.7) Oceania
+MT791920.1 rgba(104,2,63,0.7) North America
+MW001265.1 rgba(104,2,63,0.7) North America
+MW070107.1 rgba(104,2,63,0.7) North America
+MW192093.1 rgba(104,2,63,0.7) North America
+MT641622.1 rgba(104,2,63,0.7) North America
+MT370991.1 rgba(104,2,63,0.7) North America
+MW277397.1 rgba(0,199,249,0.7) Oceania
+MW349078.1 rgba(104,2,63,0.7) North America
+MT834326.1 rgba(104,2,63,0.7) North America
+MT627413.1 rgba(104,2,63,0.7) North America
+MW288272.1 rgba(104,2,63,0.7) North America
+MW154359.1 rgba(0,199,249,0.7) Oceania
+MW155441.1 rgba(0,199,249,0.7) Oceania
+MW185047.1 rgba(0,199,249,0.7) Oceania
+MW065178.1 rgba(104,2,63,0.7) North America
+MW020085.1 rgba(104,2,63,0.7) North America
+MT873397.1 rgba(104,2,63,0.7) North America
+MW280548.1 rgba(104,2,63,0.7) North America
+RFPL_1 rgba(255,215,0,0.7) RFPL_1
+RFPL_2 rgba(255,215,0,0.7) RFPL_2
+RFPL_3 rgba(255,215,0,0.7) RFPL_3
+RFPS_1 rgba(255,215,0,0.7) RFPS_1
+RFPS_2 rgba(255,215,0,0.7) RFPS_2
+RFPS_3 rgba(255,215,0,0.7) RFPS_3
