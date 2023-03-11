@@ -110,7 +110,7 @@ For Mac user:
 cd ~/Desktop 
 mkdir tree_file
 cd tree_file
-scp user_name@gna5031s1-user_name-01.rep.monash.edu:/XXX/data/input.msa.trim.treefile .
+scp user_name@gna5031s1-user_name-01.rep.monash.edu:/GNA5031_applied3/data/input.msa.trim.treefile .
 ```
 
 For Windows user, use the pre-generated tree file - `input.msa.trim.treefile`
@@ -166,7 +166,7 @@ git clone https://github.com/GreeningLab/GNA5031_applied3.git
 Install Mamba, and related softwares
 Mamba is a package manager for the Python programming language that aims to be a faster and more reliable alternative to the popular package manager, conda. Mamba uses the same package and environment specification formats as conda, so it is fully compatible with existing conda environments and packages. In simpler words, it is tool for software installations. 
 ```
-cd ~/XXX/tools
+cd ~/GNA5031_applied3/tools
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh
 bash Mambaforge-$(uname)-$(uname -m).sh -p ~/session3/tools/mamgaforge
 
