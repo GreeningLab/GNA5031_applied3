@@ -141,7 +141,7 @@ Export a pdf file for the rendered tree
 Further exploration of tree styles at:
 https://itol.embl.de/gallery.cgi
 
-## **5. Hands-on component tow (virtual machine)** 
+## **5. Hands-on component two (virtual machine)** 
 **Note**: replace user_name with your own user name in from the following scripts
 
 ### 5.1 access to virutal machine, setting up directory for analysis
@@ -225,7 +225,7 @@ iqtree -s input.msa.trim.fasta -alrt 1000 -bb 1000 -m TEST -nt 4
 -m for model select. TEST is by testing several models.
 
 ```
-After this is done, go back to **4.5**
+After this is done, go back to **Section 4.5**
 
 When all analysis is done, exit analysis environment and exit virtual machine for good practice
 ```
