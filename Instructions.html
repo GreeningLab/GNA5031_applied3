@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="gna5031-applied-session-3">GNA5031 Applied Session 3</h1>
+<p><strong>Phylogenetic reconstruction</strong></p>
+<h2 id="1-background"><strong>1. Background</strong></h2>
+<p>The application of wastewater-based epidemiology (WBE) to support the global response to the COVID-19 pandemic has shown encouraging outcomes. The accurate, sensitive, and high-throughput detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) in municipal wastewater is critical for wastewater-based epidemiology. In this practical session, we will learn to infer the origin of SARS-CoV-2 genomes that are derived from wastewater surveillance by comparing them against reference genomes. For end product of today's analysis, see the figure below. For more information of wastewater-based analysis of SARS-CoV-2, please refer to:</p>
+<ul>
+<li>https://pubs.acs.org/doi/full/10.1021/acs.estlett.1c00408</li>
+<li>https://pubs.acs.org/doi/full/10.1021/acsestwater.2c00083</li>
+</ul>
+<p><img src="https://pubs.acs.org/cms/10.1021/acsestwater.2c00083/asset/images/large/ew2c00083_0001.jpeg" alt="alt"></p>
+<p>For ways to obtain viral RNA from wastewater, see above publications.</p>
+<p><img src="https://pubs.acs.org/cms/10.1021/acs.estlett.1c00408/asset/images/medium/ez1c00408_0003.gif" alt="alt"></p>
+<h2 id="2-learning-objectives"><strong>2. Learning Objectives</strong>:</h2>
+<p><strong>Today, we will be generating a simplified version of a phylogenetic tree to show the origin of SARS-CoV-2 using wastewater-based epidimeology coupled with phylogenetic analysis.</strong></p>
+<p>At the conclusion of this session, students are expected to:</p>
+<ul>
+<li>Understand a genome file (with extension &quot;.fasta&quot;)</li>
+<li>Align genomes using MAFFT</li>
+<li>Trim genomes using TrimAL</li>
+<li>Infer phylogenetic tree using IQTREE</li>
+<li>Visualize phylogenetic tree using ITOL</li>
+</ul>
+<h2 id="3-prerequisite"><strong>3. Prerequisite</strong>:</h2>
+<h3 id="31-virtual-machines-vms">3.1 Virtual machines (VMs)</h3>
+<p>You have been provided credentials that will allow you to access these virtual machines 24/7. To access any remote server, we use the terminal and the ssh command. If you are on a mac or linux based PC, you will have terminal in-built. If you are on a windows-based PC, please download PuTTY.
+To sign up for a VM please enter your name next to a line in this Google Doc: https://docs.google.com/spreadsheets/d/1H9k6jPfAR96m_0iKUA_sbLZEUzDmlME8yHlfLmAKTow/edit?usp=sharing</p>
+<p><strong>Note</strong>: You cannot share a VM, please jot down your virtual machine credentials.</p>
+<p>Accessing virtual machines using <strong>PuTTY</strong> (Windows user)</p>
+<p>If you are using Windows, you will access your virtual machines using PuTTY. In the hostname (or IP address) box, enter the hostname that you were provided. Ensure the connection type is SSH. Click open. You will be prompted to enter your username and password in the terminal window. Enter your credentials and click enter. Note you will not see the characters as they are typed. You are now in your home directory on the VM.</p>
+<p>Accessing virtual machines using the <strong>terminal</strong> app (Mac user)</p>
+<p>To access your VM using the terminal app on Mac, search for the terminal app using the search bar in the top right-hand corner of your computer. Type the following command following the convention of <code>ssh username@hostname</code> where <code>username</code> is your username at Monash, and <code>hostname</code> is the hostname provided for this course. Click enter, you will be promted for a password. Enter your Monash password and click enter. Note you will not see the characters as they are typed. You are now in your home directory on the VM.</p>
+<p>Example:</p>
+<pre class="hljs"><code><div>ssh -x gnii0001@gna5031s1-gnii0001-01.rep.monash.edu
+</div></code></pre>
+<h3 id="32-the-monash-vpn">3.2 The Monash VPN</h3>
+<p>Due to security constraints, our virtual machines can only be accessed from within the Monash network. If you are offsite, you will need to first connect to the Monash Virtual Private Network (VPN). Detailed instructions can be found on the following website:
+https://www.monash.edu/esolutions/network/vpn</p>
+<p>Install the VPN software and test your connection.</p>
+<h3 id="33-register-at-itol">3.3 Register at ITOL</h3>
+<p>Note: Please register for a free account prior to the practical session, at:
+https://itol.embl.de/</p>
+<h2 id="4-hands-on-component-one-local"><strong>4. Hands-on component one (local)</strong></h2>
+<p><strong>Note</strong> : This is on your local PC (i.e. not with virtual machine)</p>
+<h3 id="41-prepare-local-copy-of-data">4.1 Prepare local copy of data.</h3>
+<p>Press <strong>Download ZIP</strong> under <strong>Code</strong> from the following page:
+https://github.com/GreeningLab/GNA5031_applied3.git
+Decompress</p>
+<p>Install <strong>Seaview</strong> for sequence and alignment visualisation:
+https://doua.prabi.fr/software/seaview</p>
+<p>Install <strong>Sublime Text 2</strong> for working with text:
+https://www.sublimetext.com/2
+<strong>Note</strong>: Not restricted to a single text editor; if you have BBEdit from session, feel free to use it.</p>
+<h3 id="42-visualize-sequence-data-using-seaview">4.2 Visualize sequence data using Seaview</h3>
+<p>Under filder data_pregenerated:</p>
+<p>Drag and drop <code>input.fasta</code> into Seaview
+Observe nucleotides and colors.</p>
+<h3 id="43-visualize-aligned-data-using-seaview">4.3 Visualize aligned data using Seaview</h3>
+<p>Drag and drop <code>input.msa.fasta</code> into Seaview
+Observe nucleotides and colors.</p>
+<h3 id="44-visualize-aligned-and-trimed-data-using-seaview">4.4 Visualize aligned and trimed data using Seaview</h3>
+<p>Drag and drop <code>input.msa.trimmed.fasta</code> into Seaview
+Observe nucleotides and colors.</p>
+<h3 id="45-extra-inspect-generated-phylogenetic-tree-file-using-a-text-editor">4.5 Extra, inspect generated phylogenetic tree file using a text editor</h3>
+<p>Inspect <code>input.msa.trimmed.treefile</code></p>
+<h3 id="45-visualization-of-phylogenetic-trees">4.5 Visualization of phylogenetic trees</h3>
+<p><strong>Note</strong> This should be followed when section 5.4 is complete</p>
+<p>iTOL (Interactive Tree Of Life) is a web-based tool that allows users to visualize and explore phylogenetic trees and other hierarchical data sets. It was developed by Ivica Letunic and Peer Bork at the European Molecular Biology Laboratory (EMBL) in Heidelberg, Germany, and has become a popular tool in the field of evolutionary biology and comparative genomics.</p>
+<p>With iTOL, users can customize the display of their tree using a range of options, such as changing the layout, adding labels and annotations, and highlighting specific clades or branches. The tool also supports the integration of additional data sets, such as functional annotations or environmental information, which can be overlaid onto the tree to provide a more comprehensive view of the relationships between different organisms.</p>
+<p>In addition to visualizing phylogenetic trees, iTOL can also be used to explore other types of hierarchical data sets, such as gene ontologies, protein domains, and metabolic pathways. The tool has a user-friendly interface and is freely available for use online, making it accessible to researchers and educators around the world.</p>
+<p>Webpage:
+https://itol.embl.de/</p>
+<h4 id="451-obtain-the-generated-tree-file">4.5.1 Obtain the generated tree file</h4>
+<p><strong>Note</strong> use pre_generated file if not ready
+For Mac user:</p>
+<pre class="hljs"><code><div>cd ~/Desktop 
+mkdir tree_file
+cd tree_file
+scp user_name@gna5031s1-user_name-01.rep.monash.edu:/GNA5031_applied3/data/input.msa.trim.treefile .
+</div></code></pre>
+<p>For Windows user, use the pre-generated tree file - <code>input.msa.trim.treefile</code></p>
+<h4 id="452-upload-to-itol">4.5.2 Upload to ITOL</h4>
+<p>Go to ITOL webpage (https://itol.embl.de/)
+press the following:</p>
+<p>My Trees =&gt; Tree upload (drag and drop) =&gt; click on <code>input.msa.trim.treefile</code> to enter the tree</p>
+<h4 id="453-tree-exploration">4.5.3 Tree exploration</h4>
+<p>After tree being uploaded, explore:</p>
+<ul>
+<li>circular or rectangular tree format</li>
+<li>Labels and Lable options</li>
+<li>Advanced options</li>
+<li>Export options</li>
+</ul>
+<p>Annotate tree lables with pre-generated file <code>color.strip.txt</code>
+Explore the following sections:</p>
+<ul>
+<li>Mandatory settins</li>
+<li>Actual data</li>
+</ul>
+<p><strong>Questions</strong></p>
+<ul>
+<li>What is the meaning of <code>MW240742.1 rgba(104,2,63,0.7) North America</code>?</li>
+<li>What is the meaning of <code>RFPL_1 rgba(255,215,0,0.7) RFPL_1</code>?</li>
+</ul>
+<h4 id="454-figure-export">4.5.4 Figure export</h4>
+<p>Export a pdf file for the rendered tree</p>
+<p>Further exploration of tree styles at:
+https://itol.embl.de/gallery.cgi</p>
+<h2 id="5-hands-on-component-tow-virtual-machine"><strong>5. Hands-on component tow (virtual machine)</strong></h2>
+<p><strong>Note</strong>: replace user_name with your own user name in from the following scripts</p>
+<h3 id="51-access-to-virutal-machine-setting-up-directory-for-analysis">5.1 access to virutal machine, setting up directory for analysis</h3>
+<pre class="hljs"><code><div>ssh -x user_name@gna5031s1-user_name-01.rep.monash.edu
+</div></code></pre>
+<p>Make sure you start in your home directory using tilde &quot;~&quot;, which indicates home directory in Linux systems</p>
+<pre class="hljs"><code><div>cd ~
+</div></code></pre>
+<p>Download course material using <code>git clone</code></p>
+<pre class="hljs"><code><div>git clone https://github.com/GreeningLab/GNA5031_applied3.git
+</div></code></pre>
+<p>Install Mamba, and related softwares
+Mamba is a package manager for the Python programming language that aims to be a faster and more reliable alternative to the popular package manager, conda. Mamba uses the same package and environment specification formats as conda, so it is fully compatible with existing conda environments and packages. In simpler words, it is tool for software installations.</p>
+<pre class="hljs"><code><div>cd ~/GNA5031_applied3/
+mkdir -p tools
+cd tools
+wget &quot;https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh
+bash Mambaforge-$(uname)-$(uname -m).sh -p ~/session3/tools/mamgaforge
+
+</div></code></pre>
+<p><strong>Note</strong>: yes to all prompts during mamba installation. Also, need to exit and re-login to take effect</p>
+<pre class="hljs"><code><div>exit
+ssh -x user_name@gna5031s1-user_name-01.rep.monash.edu
+</div></code></pre>
+<p>Create an isolation environment for phylogenetic analysis, install software MAFFT, TrimAL and IQTREE</p>
+<pre class="hljs"><code><div>mamba create -y -n phylogenetics
+mamba activate phylogenetics
+mamba install -c bioconda iqtree # press y and enter to confirm changes
+mamba install -c bioconda mafft # press y and enter to confirm changes
+mamba install -c bioconda trimal # press y and enter to confirm changes
+</div></code></pre>
+<p>Test whether installation is successful</p>
+<pre class="hljs"><code><div>iqtree -h
+mafft -h
+trimal -h
+</div></code></pre>
+<p>You're ready to go if software information are displayed.</p>
+<h3 id="52-align-sequences">5.2 Align sequences</h3>
+<p>Sequence alignment is a fundamental step in many bioinformatics applications, including phylogenetic inference and others. It allows us to identify regions of similarity and difference between two or more sequences. By aligning sequences, we can identify conserved regions, mutations, insertions, and deletions, among others. This information is useful for understanding the evolutionary relationships among the sequences, identifying functional domains, and detecting genetic variations that may be associated with disease or other phenotypes.</p>
+<p>Common tools for alignment: MAFFT (https://mafft.cbrc.jp/alignment/software/)</p>
+<pre class="hljs"><code><div>mafft --preservecase --auto --reorder --thread -1 input.fasta &gt; input.msa.fasta 
+# 14m49.445s tested
+</div></code></pre>
+<h3 id="53-trim-alignment">5.3 Trim alignment</h3>
+<p>Trimming alignment is a common step in the process of inferring phylogenetic trees from molecular sequence data. The main reason for trimming alignment is to remove any poorly aligned or ambiguous regions in the sequence data that may affect the accuracy of the phylogenetic inference.
+Common tools for trimming: trimal (http://trimal.cgenomics.org/)</p>
+<pre class="hljs"><code><div>time trimal -in input.msa.fasta  -out input.msa.trim.fasta -automated1
+# 0m8.611s tested
+</div></code></pre>
+<h3 id="54-phylogenetic-inference">5.4 Phylogenetic inference</h3>
+<p>Tree inference, also known as phylogenetic inference, is the process of reconstructing the evolutionary relationships among different organisms or groups of organisms based on their molecular or morphological characteristics. The resulting tree structure is called a phylogenetic tree, and it represents the evolutionary history of the group under study. The goal of tree inference is to reconstruct a tree that best explains the observed similarities and differences among the sequences or traits, while minimizing the number of evolutionary changes required to explain the data.
+A common tool is IQTREE (http://www.iqtree.org/).</p>
+<pre class="hljs"><code><div>iqtree -s input.msa.trim.fasta -alrt 1000 -bb 1000 -m TEST -nt 4
+# 2m48.720s tested
+
+-s for input
+-arlt for Replicates for SH approximate likelihood ratio test. The SH (Shimodaira-Hasegawa) test is a statistical test used to evaluate the support for different branches in a phylogenetic tree. Don't mind it for now.
+-B for Replicates for ultrafast bootstrap (1000 is a commonly used number).
+-m for model select. TEST is by testing several models.
+
+</div></code></pre>
+<p>After this is done, go back to <strong>4.5</strong></p>
+<p>When all analysis is done, exit analysis environment and exit virtual machine for good practice</p>
+<pre class="hljs"><code><div>mamba activate phylogenetics
+exit
+</div></code></pre>
+
+</body>
+</html>
