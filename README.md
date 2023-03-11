@@ -10,7 +10,7 @@ The application of wastewater-based epidemiology (WBE) to support the global res
 
 For ways to obtain viral RNA from wastewater, see above publications.
 
-![alt](https://pubs.acs.org/cms/10.1021/acs.estlett.1c00408/asset/images/medium/ez1c00408_0003.gif) 
+![alt](https://pubs.acs.org/cms/10.1021/acs.estlett.1c00408/asset/images/medium/ez1c00408_0003.gif)
 
 
 ## **2. Learning Objectives**:
