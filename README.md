@@ -46,13 +46,13 @@ Example:
 ssh -x gnii0001@gna5031s1-gnii0001-01.rep.monash.edu
 ```
 
-### The Monash VPN
+### 3.2 The Monash VPN
 Due to security constraints, our virtual machines can only be accessed from within the Monash network. If you are offsite, you will need to first connect to the Monash Virtual Private Network (VPN). Detailed instructions can be found on the following website:
 https://www.monash.edu/esolutions/network/vpn
  
 Install the VPN software and test your connection.
 
-### Register at ITOL
+### 3.3 Register at ITOL
 Note: Please register for a free account prior to the practical session, at:
 https://itol.embl.de/
 
@@ -62,7 +62,7 @@ https://itol.embl.de/
 ### 4.1 Prepare local copy of data.
 
 Press **Download ZIP** under **Code** from the following page:
-https://github.com/ganiatgithub/xxx
+https://github.com/GreeningLab/GNA5031_applied3.git
 Decompress
 
 Install **Seaview** for sequence and alignment visualisation:
@@ -90,17 +90,20 @@ Observe nucleotides and colors.
 Inspect `input.msa.trimmed.treefile` 
 
 ### 4.5 Visualization of phylogenetic trees
-**After 5.4 is complete**
+**Note** This should be followed when section 5.4 is complete
+
 iTOL (Interactive Tree Of Life) is a web-based tool that allows users to visualize and explore phylogenetic trees and other hierarchical data sets. It was developed by Ivica Letunic and Peer Bork at the European Molecular Biology Laboratory (EMBL) in Heidelberg, Germany, and has become a popular tool in the field of evolutionary biology and comparative genomics.
 
 With iTOL, users can customize the display of their tree using a range of options, such as changing the layout, adding labels and annotations, and highlighting specific clades or branches. The tool also supports the integration of additional data sets, such as functional annotations or environmental information, which can be overlaid onto the tree to provide a more comprehensive view of the relationships between different organisms.
 
 In addition to visualizing phylogenetic trees, iTOL can also be used to explore other types of hierarchical data sets, such as gene ontologies, protein domains, and metabolic pathways. The tool has a user-friendly interface and is freely available for use online, making it accessible to researchers and educators around the world.
 
-Webpage:https://itol.embl.de/
+Webpage:
+https://itol.embl.de/
 
-Obtain the generated tree file (use pre_generated file if not ready)
+#### 4.5.1 Obtain the generated tree file 
 
+**Note** use pre_generated file if not ready
 For Mac user:
 
 ```
@@ -112,10 +115,13 @@ scp user_name@gna5031s1-user_name-01.rep.monash.edu:/XXX/data/input.msa.trim.tre
 
 For Windows user, use the pre-generated tree file - `input.msa.trim.treefile`
 
-Go to ITOL webpage (https://itol.embl.de/); press the following: 
+#### 4.5.2 Upload to ITOL
+Go to ITOL webpage (https://itol.embl.de/)
+press the following: 
 
 My Trees => Tree upload (drag and drop) => click on `input.msa.trim.treefile` to enter the tree
 
+#### 4.5.3 Tree exploration
 After tree being uploaded, explore:
 - circular or rectangular tree format
 - Labels and Lable options
@@ -131,6 +137,7 @@ Explore the following sections:
 - What is the meaning of `MW240742.1 rgba(104,2,63,0.7) North America`?
 - What is the meaning of `RFPL_1 rgba(255,215,0,0.7) RFPL_1`?
 
+#### 4.5.4 Figure export
 Export a pdf file for the rendered tree
 
 Further exploration of tree styles at:
@@ -153,7 +160,7 @@ cd ~
 Download course material using `git clone`
 
 ```
-git clone https://github.com/ganiatgithub/xxx
+git clone https://github.com/GreeningLab/GNA5031_applied3.git
 ```
 
 Install Mamba, and related softwares
