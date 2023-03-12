@@ -1,5 +1,5 @@
 # GNA5031 Applied Session 3
-**Case study - Phylogenetic reconstruction**
+**Instructor's copy for case study - Phylogenetic reconstruction**
 
 ## **1. Background**
 The application of wastewater-based epidemiology (WBE) to support the global response to the COVID-19 pandemic has shown encouraging outcomes. The accurate, sensitive, and high-throughput detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) in municipal wastewater is critical for wastewater-based epidemiology. The orgin the the virus is valuable to inform public health measurements during the global response to the pandemic.
