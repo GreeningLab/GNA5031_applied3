@@ -98,6 +98,7 @@ Drag and drop `input.msa.trimmed.fasta` into Seaview
 Observe nucleotides and colors. 
 
 **FOR INSTRUCTORS: help students to drag and drop the sequence files into Seaview**
+
 `input.fasta`
 ![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input.png)
 
@@ -117,6 +118,7 @@ Inspect `input.msa.trimmed.treefile`
 ![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_tree_file.png)
 
 ## **5. Hands-on component two (virtual machine except last step)** 
+
 **Note**: replace user_name with your own user name in from the following scripts
 
 ### 5.1 access to virutal machine, setting up directory for analysis
@@ -158,6 +160,7 @@ bash Mambaforge-$(uname)-$(uname -m).sh -p ~/session3/tools/mamgaforge
 
 ```
 **Note**: yes to all prompts during mamba installation. Also, need to exit and re-login to take effect
+
 ```
 exit
 ssh -x user_name@gna5031s1-user_name-01.rep.monash.edu
@@ -289,6 +292,7 @@ Explore the following sections:
 - What is the meaning of `RFPL_1 rgba(255,215,0,0.7) RFPL_1`?
 
 **FOR INSTRUCTORS: help students open the annotation file in a text editor.**
+
 **FOR INSTRUCTORS: First part (MW240742.1 and RFPL_1) means the tree leave, second part (rgba(104,2,63,0.7)) means color to be applied; while the last part shows either this is our own sample or reference sequence.**
 
 Desired output
