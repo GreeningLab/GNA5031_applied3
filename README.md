@@ -113,8 +113,8 @@ Inspect `input.msa.trimmed.treefile`
 
 **FOR INSTRUCTORS: help students to open this treefile with a text editor**
 
-`input.msa.trimmed.fasta`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned_trimmed.png)
+`input.msa.trimmed.treefile`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_tree_file.png)
 
 ## **5. Hands-on component two (virtual machine except last step)** 
 **Note**: replace user_name with your own user name in from the following scripts
@@ -293,7 +293,7 @@ Explore the following sections:
 
 Desired output
 
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned_trimmed.png)
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_tree_file.png)
 
 #### 4.5.4 Figure export
 Export a pdf file for the rendered tree
