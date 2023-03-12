@@ -293,7 +293,7 @@ Explore the following sections:
 
 Desired output
 
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_tree_file.png)
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_phylogenetic_tree.png)
 
 #### 4.5.4 Figure export
 Export a pdf file for the rendered tree
