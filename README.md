@@ -56,6 +56,7 @@ https://itol.embl.de/
 
 
 ## **4. Hands-on component one** 
+
 **Note** : This is on your local PC (i.e. not with virtual machine)
 
 ### 4.1 Prepare local copy of data.
@@ -69,6 +70,7 @@ https://doua.prabi.fr/software/seaview
 
 Install **Sublime Text 2** for working with text:
 https://www.sublimetext.com/2
+
 **Note**: Not restricted to a single text editor; if you have BBEdit from session, feel free to use it. 
 
 ### 4.2 Visualize sequence data using Seaview
@@ -127,7 +129,9 @@ wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambafor
 bash Mambaforge-$(uname)-$(uname -m).sh -p ~/session3/tools/mamgaforge
 
 ```
+
 **Note**: yes to all prompts during mamba installation. Also, need to exit and re-login to take effect
+
 ```
 exit
 ssh -x user_name@gna5031s1-user_name-01.rep.monash.edu
@@ -211,6 +215,7 @@ https://itol.embl.de/
 #### 4.5.1 Obtain the generated tree file 
 
 **Note** use pre_generated file if not ready
+
 For Mac user:
 
 ```
@@ -242,6 +247,7 @@ Explore the following sections:
 - Actual data
 
 **Questions**
+
 - What is the meaning of `MW240742.1 rgba(104,2,63,0.7) North America`?
 - What is the meaning of `RFPL_1 rgba(255,215,0,0.7) RFPL_1`?
 

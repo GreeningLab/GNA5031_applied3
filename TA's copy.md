@@ -62,6 +62,7 @@ https://itol.embl.de/
 **FOR INSTRUCTORS: students can register at ITOL and login with credentials.**
 
 ## **4. Hands-on component one** 
+
 **Note** : This is on your local PC (i.e. not with virtual machine)
 
 ### 4.1 Prepare local copy of data.
@@ -79,6 +80,7 @@ https://doua.prabi.fr/software/seaview
 
 Install **Sublime Text 2** for working with text:
 https://www.sublimetext.com/2
+
 **Note**: Not restricted to a single text editor; if you have BBEdit from session, feel free to use it. 
 
 **FOR INSTRUCTORS: students have a test editor such sublime text or BBEdit installed)**
@@ -159,6 +161,7 @@ wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambafor
 bash Mambaforge-$(uname)-$(uname -m).sh -p ~/session3/tools/mamgaforge
 
 ```
+
 **Note**: yes to all prompts during mamba installation. Also, need to exit and re-login to take effect
 
 ```
@@ -288,6 +291,7 @@ Explore the following sections:
 - Actual data
 
 **Questions**
+
 - What is the meaning of `MW240742.1 rgba(104,2,63,0.7) North America`?
 - What is the meaning of `RFPL_1 rgba(255,215,0,0.7) RFPL_1`?
 
