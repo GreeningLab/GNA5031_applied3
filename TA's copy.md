@@ -5,7 +5,8 @@
 The application of wastewater-based epidemiology (WBE) to support the global response to the COVID-19 pandemic has shown encouraging outcomes. The accurate, sensitive, and high-throughput detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) in municipal wastewater is critical for wastewater-based epidemiology. The orgin the the virus is valuable to inform public health measurements during the global response to the pandemic.
 
 **In this case study, we will adopte phylogenetic techniques that was discussed during this week's lectures to trace the origin of SARS-CoV-2 using genomes that were obtained from international flights that landed in Brisbane, Australia in June, 2021. In order to achieve this goal, we will analyze these genomes together with 500 reference genomes that were reported from other parts of the world.**
-[alt]()
+
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/images_large_ez1c00408_0003.jpeg)
 
 For more information of wastewater-based analysis of SARS-CoV-2, please refer to:
 - https://pubs.acs.org/doi/full/10.1021/acs.estlett.1c00408
@@ -97,11 +98,23 @@ Drag and drop `input.msa.trimmed.fasta` into Seaview
 Observe nucleotides and colors. 
 
 **FOR INSTRUCTORS: help students to drag and drop the sequence files into Seaview**
+`input.fasta`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input.png)
+
+`input.msa.fasta`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned.png)
+
+`input.msa.trimmed.fasta`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned_trimmed.png)
+
 
 ### 4.5 Inspect generated phylogenetic tree file using a text editor
 Inspect `input.msa.trimmed.treefile` 
 
 **FOR INSTRUCTORS: help students to open this treefile with a text editor**
+
+`input.msa.trimmed.fasta`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned_trimmed.png)
 
 ## **5. Hands-on component two (virtual machine except last step)** 
 **Note**: replace user_name with your own user name in from the following scripts
@@ -277,6 +290,10 @@ Explore the following sections:
 
 **FOR INSTRUCTORS: help students open the annotation file in a text editor.**
 **FOR INSTRUCTORS: First part (MW240742.1 and RFPL_1) means the tree leave, second part (rgba(104,2,63,0.7)) means color to be applied; while the last part shows either this is our own sample or reference sequence.**
+
+Desired output
+
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned_trimmed.png)
 
 #### 4.5.4 Figure export
 Export a pdf file for the rendered tree
