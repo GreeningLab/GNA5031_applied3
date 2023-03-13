@@ -94,10 +94,6 @@ Observe nucleotides and colors.
 ### 4.5 Inspect generated phylogenetic tree file using a text editor
 Inspect `input.msa.trimmed.treefile` 
 
-
-`input.msa.trimmed.treefile`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_tree_file.png)
-
 ## **5. Hands-on component two (virtual machine except last step)** 
 
 **Note**: replace user_name with your own user name in from the following scripts
