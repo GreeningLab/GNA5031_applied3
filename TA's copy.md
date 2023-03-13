@@ -4,7 +4,7 @@
 ## **1. Background**
 The application of wastewater-based epidemiology (WBE) to support the global response to the COVID-19 pandemic has shown encouraging outcomes. The accurate, sensitive, and high-throughput detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) in municipal wastewater is critical for wastewater-based epidemiology. The orgin the the virus is valuable to inform public health measurements during the global response to the pandemic.
 
-**In this case study, we will adopte phylogenetic techniques that was discussed during this week's lectures to trace the origin of SARS-CoV-2 using genomes that were obtained from international flights that landed in Brisbane, Australia in June, 2021. In order to achieve this goal, we will analyze these genomes together with 500 reference genomes that were reported from other parts of the world.**
+**Previously, we have obtained genomes of SARS-CoV-2 viruses from the wastewater of this passenger flight (de-identified due to confidentiality). In this case study, we will adopte phylogenetic techniques that was discussed during this week's lectures to trace the origin of SARS-CoV-2 using genomes that were obtained from international flights that landed in Brisbane, Australia in winter, 2021. In order to achieve this goal, we will analyze these genomes within unknown origin together with 500 reference genomes with known origin.**
 
 ![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/images_large_ez1c00408_0003.jpeg)
 
@@ -25,6 +25,9 @@ At the conclusion of this session, students are expected to:
  - Visualize phylogenetic tree using ITOL
 
 ## **3. Prerequisite**: 
+
+**OBJECTIVES: Complete the following prerequisites, which are essential in following this practiacl session**
+
 ### 3.1 Virtual machines (VMs)
 
 You have been provided credentials that will allow you to access these virtual machines 24/7. To access any remote server, we use the terminal and the ssh command. If you are on a mac or linux based PC, you will have terminal in-built. If you are on a windows-based PC, please download PuTTY.
@@ -61,9 +64,12 @@ https://itol.embl.de/
 
 **FOR INSTRUCTORS: students can register at ITOL and login with credentials.**
 
+
 ## **4. Hands-on component one** 
 
 **Note** : This is on your local PC (i.e. not with virtual machine)
+
+**OBJECTIVES: Learn to visualize files generated in each step of phylogenetic reconstruction, while facilitate understanding of the entire session.**
 
 ### 4.1 Prepare local copy of data.
 
@@ -101,6 +107,8 @@ Observe nucleotides and colors.
 
 **FOR INSTRUCTORS: help students to drag and drop the sequence files into Seaview**
 
+If you see the following, it has worked.
+
 `input.fasta`
 ![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input.png)
 
@@ -114,12 +122,16 @@ Observe nucleotides and colors.
 ### 4.5 Inspect generated phylogenetic tree file using a text editor
 Inspect `input.msa.trimmed.treefile` 
 
+If you see the following, it has worked.
+
 **FOR INSTRUCTORS: help students to open this treefile with a text editor**
 
 `input.msa.trimmed.treefile`
 ![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_tree_file.png)
 
 ## **5. Hands-on component two (virtual machine except last step)** 
+
+**OBJECTIVES: Learn to carry out phylogenetic reconstruction using the following steps. The result can help us to infer the origin of the virus based on wastewater monitoring.**
 
 **Note**: replace user_name with your own user name in from the following scripts
 
@@ -171,6 +183,8 @@ mafft --preservecase --auto --reorder --thread -1 input.fasta > input.msa.fasta
 
 ```
 
+If the above code runs without complains, you have succeeded in this task.
+
 **FOR INSTRUCTORS: help students access the data directory and operate mafft using the above codes. Help students to move forward using pre-generated data if didn't work**
 
 ### 5.3 Trim alignment
@@ -181,6 +195,8 @@ Common tools for trimming: trimal (http://trimal.cgenomics.org/)
 trimal -in input.msa.fasta  -out input.msa.trim.fasta -automated1
 
 ```
+
+If the above code runs without complains, you have succeeded in this task.
 
 **FOR INSTRUCTORS: help students operate trimal using the above codes. Help students to move forward using pre-generated data if didn't work**
 
@@ -202,6 +218,8 @@ When all analysis is done, exit analysis environment and exit virtual machine fo
 mamba activate phylogenetics
 exit
 ```
+
+If the above code runs without complains, you have succeeded in this task.
 
 **FOR INSTRUCTORS: help students operate iqtree using the above codes, and exit virtual machine as intructed.**
 
@@ -272,3 +290,7 @@ Further exploration of tree styles at:
 https://itol.embl.de/gallery.cgi
 
 **FOR INSTRUCTORS: help students to explore, annotate and export the tree.**
+
+## **Cconclusions** 
+
+The phylogenetic tree shows that the samples we analyzed (yellow branches) are close to virus strains from Asia (pink-ish). And because the flight to Brisbane is from Asia, our result is in agreement with expectation. And this shows that wastewater monitoring of SARS-CoV-2 is a useful tool to shown the origin of the virus.

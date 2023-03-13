@@ -4,14 +4,13 @@
 ## **1. Background**
 The application of wastewater-based epidemiology (WBE) to support the global response to the COVID-19 pandemic has shown encouraging outcomes. The accurate, sensitive, and high-throughput detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) in municipal wastewater is critical for wastewater-based epidemiology. The orgin the the virus is valuable to inform public health measurements during the global response to the pandemic.
 
-**In this case study, we will adopte phylogenetic techniques that was discussed during this week's lectures to trace the origin of SARS-CoV-2 using genomes that were obtained from international flights that landed in Brisbane, Australia in June, 2021. In order to achieve this goal, we will analyze these genomes together with 500 reference genomes that were reported from other parts of the world.**
+**Previously, we have obtained genomes of SARS-CoV-2 viruses from the wastewater of this passenger flight (de-identified due to confidentiality). In this case study, we will adopte phylogenetic techniques that was discussed during this week's lectures to trace the origin of SARS-CoV-2 using genomes that were obtained from international flights that landed in Brisbane, Australia in winter, 2021. In order to achieve this goal, we will analyze these genomes within unknown origin together with 500 reference genomes with known origin.**
 
 ![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/images_large_ez1c00408_0003.jpeg)
 
 For more information of wastewater-based analysis of SARS-CoV-2, please refer to:
 - https://pubs.acs.org/doi/full/10.1021/acs.estlett.1c00408
 - https://pubs.acs.org/doi/full/10.1021/acsestwater.2c00083
-
 
 ## **2. Learning Objectives**:
 
@@ -23,6 +22,9 @@ At the conclusion of this session, students are expected to:
  - Visualize phylogenetic tree using ITOL
 
 ## **3. Prerequisite**: 
+
+**OBJECTIVES: Complete the following prerequisites, which are essential in following this practiacl session**
+
 ### 3.1 Virtual machines (VMs)
 
 You have been provided credentials that will allow you to access these virtual machines 24/7. To access any remote server, we use the terminal and the ssh command. If you are on a mac or linux based PC, you will have terminal in-built. If you are on a windows-based PC, please download PuTTY.
@@ -43,13 +45,11 @@ Example:
 ssh -x gnii0001@gna5031s1-gnii0001-01.rep.monash.edu
 ```
 
-
 ### 3.2 The Monash VPN
 Due to security constraints, our virtual machines can only be accessed from within the Monash network. If you are offsite, you will need to first connect to the Monash Virtual Private Network (VPN). Detailed instructions can be found on the following website:
 https://www.monash.edu/esolutions/network/vpn
  
 Install the VPN software and test your connection.
-
 
 ### 3.3 Register at ITOL
 Note: Please register for a free account prior to the practical session, at:
@@ -60,22 +60,21 @@ https://itol.embl.de/
 
 **Note** : This is on your local PC (i.e. not with virtual machine)
 
+**OBJECTIVES: Learn to visualize files generated in each step of phylogenetic reconstruction, while facilitate understanding of the entire session.**
+
 ### 4.1 Prepare local copy of data.
 
 Press **Download ZIP** under **Code** from the following page:
 https://github.com/GreeningLab/GNA5031_applied3.git
 Decompress
 
-
 Install **Seaview** for sequence and alignment visualisation:
 https://doua.prabi.fr/software/seaview
-
 
 Install **Sublime Text 2** for working with text:
 https://www.sublimetext.com/2
 
 **Note**: Not restricted to a single text editor; if you have BBEdit from session, feel free to use it. 
-
 
 ### 4.2 Visualize sequence data using Seaview
 Under filder data_pregenerated:
@@ -91,10 +90,29 @@ Observe nucleotides and colors.
 Drag and drop `input.msa.trimmed.fasta` into Seaview
 Observe nucleotides and colors. 
 
+If you see the following, it has worked.
+
+`input.fasta`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input.png)
+
+`input.msa.fasta`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned.png)
+
+`input.msa.trimmed.fasta`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned_trimmed.png)
+
+
 ### 4.5 Inspect generated phylogenetic tree file using a text editor
 Inspect `input.msa.trimmed.treefile` 
 
+If you see the following, it has worked.
+
+`input.msa.trimmed.treefile`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_tree_file.png)
+
 ## **5. Hands-on component two (virtual machine except last step)** 
+
+**OBJECTIVES: Learn to carry out phylogenetic reconstruction using the following steps. The result can help us to infer the origin of the virus based on wastewater monitoring.**
 
 **Note**: replace user_name with your own user name in from the following scripts
 
@@ -115,7 +133,6 @@ Download course material using `git clone`
 git clone https://github.com/GreeningLab/GNA5031_applied3.git
 ```
 
-
 The required software is already installed for you in a conda environment. To activate the conda environment type:
 
 ```
@@ -123,7 +140,6 @@ conda activate gna5031
 ```
 
 You'll need to do this every time you login.
-
 
 ### 5.2 Align sequences
 
@@ -142,6 +158,7 @@ mafft --preservecase --auto --reorder --thread -1 input.fasta > input.msa.fasta
 
 ```
 
+If the above code runs without complains, you have succeeded in this task.
 
 ### 5.3 Trim alignment
 Trimming alignment is a common step in the process of inferring phylogenetic trees from molecular sequence data. The main reason for trimming alignment is to remove any poorly aligned or ambiguous regions in the sequence data that may affect the accuracy of the phylogenetic inference.
@@ -151,6 +168,8 @@ Common tools for trimming: trimal (http://trimal.cgenomics.org/)
 trimal -in input.msa.fasta  -out input.msa.trim.fasta -automated1
 
 ```
+
+If the above code runs without complains, you have succeeded in this task.
 
 
 ### 5.4 Phylogenetic inference
@@ -172,6 +191,7 @@ mamba activate phylogenetics
 exit
 ```
 
+If the above code runs without complains, you have succeeded in this task.
 
 ### 5.5 Visualization of phylogenetic trees (exit virtual machine, return to your own computer)
 
@@ -221,7 +241,6 @@ Explore the following sections:
 
 - What is the meaning of `MW240742.1 rgba(104,2,63,0.7) North America`?
 - What is the meaning of `RFPL_1 rgba(255,215,0,0.7) RFPL_1`?
-
 
 Desired output
 
