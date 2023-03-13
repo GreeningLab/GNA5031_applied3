@@ -90,25 +90,8 @@ Observe nucleotides and colors.
 Drag and drop `input.msa.trimmed.fasta` into Seaview
 Observe nucleotides and colors. 
 
-If you see the following, it has worked.
-
-`input.fasta`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input.png)
-
-`input.msa.fasta`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned.png)
-
-`input.msa.trimmed.fasta`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned_trimmed.png)
-
-
 ### 4.5 Inspect generated phylogenetic tree file using a text editor
 Inspect `input.msa.trimmed.treefile` 
-
-If you see the following, it has worked.
-
-`input.msa.trimmed.treefile`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_tree_file.png)
 
 ## **5. Hands-on component two (virtual machine except last step)** 
 
@@ -241,10 +224,6 @@ Explore the following sections:
 
 - What is the meaning of `MW240742.1 rgba(104,2,63,0.7) North America`?
 - What is the meaning of `RFPL_1 rgba(255,215,0,0.7) RFPL_1`?
-
-Desired output
-
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_phylogenetic_tree.png)
 
 #### 4.5.4 Figure export
 Export a pdf file for the rendered tree
