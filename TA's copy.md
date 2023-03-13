@@ -144,52 +144,15 @@ git clone https://github.com/GreeningLab/GNA5031_applied3.git
 
 **FOR INSTRUCTORS: help students run the codes to obtain materials for this section as instructed**
 
-Install Mamba, and related softwares
-Mamba is a package manager for the Python programming language that aims to be a faster and more reliable alternative to the popular package manager, conda. Mamba uses the same package and environment specification formats as conda, so it is fully compatible with existing conda environments and packages. In simpler words, it is tool for software installations. 
-
-Need to login again
+The required software is already installed for you in a conda environment. To activate the conda environment type:
 
 ```
-ssh -x user_name@gna5031s1-user_name-01.rep.monash.edu
+conda activate gna5031
 ```
 
-```
-cd ~/GNA5031_applied3/
-mkdir -p tools
-cd tools
-wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh
-bash Mambaforge-$(uname)-$(uname -m).sh -p ~/session3/tools/mamgaforge
+You'll need to do this every time you login.
 
-```
-
-**Note**: yes to all prompts during mamba installation. Also, need to exit and re-login to take effect
-
-```
-exit
-ssh -x user_name@gna5031s1-user_name-01.rep.monash.edu
-```
-
-**FOR INSTRUCTORS: help students to login again and  install Mamba as instructed**
-
-Create an isolation environment for phylogenetic analysis, install software MAFFT, TrimAL and IQTREE
-
-```
-
-mamba create -y -n phylogenetics
-mamba activate phylogenetics
-mamba install -c bioconda iqtree # press y and enter to confirm changes
-mamba install -c bioconda mafft # press y and enter to confirm changes
-mamba install -c bioconda trimal # press y and enter to confirm changes
-```
-Test whether installation is successful
-```
-iqtree -h
-mafft -h
-trimal -h
-```
-You're ready to go if software information are displayed.
-
-**FOR INSTRUCTORS: help students to install the above software using the codes provided, and test their installations**
+**FOR INSTRUCTORS: help students to activate conda environment using the codes provided**
 
 ### 5.2 Align sequences
 
@@ -204,8 +167,8 @@ cd ~/GNA5031_applied3/
 ```
 
 ```
-mafft --preservecase --auto --reorder --thread -1 input.fasta > input.msa.fasta 
-# 14m49.445s tested
+mafft --preservecase --auto --reorder --thread -1 input.fasta > input.msa.fasta
+
 ```
 
 **FOR INSTRUCTORS: help students access the data directory and operate mafft using the above codes. Help students to move forward using pre-generated data if didn't work**
@@ -216,7 +179,7 @@ Common tools for trimming: trimal (http://trimal.cgenomics.org/)
 
 ```
 trimal -in input.msa.fasta  -out input.msa.trim.fasta -automated1
-# 0m8.611s tested
+
 ```
 
 **FOR INSTRUCTORS: help students operate trimal using the above codes. Help students to move forward using pre-generated data if didn't work**
@@ -226,7 +189,6 @@ Tree inference, also known as phylogenetic inference, is the process of reconstr
 A common tool is IQTREE (http://www.iqtree.org/).
 ```
 iqtree -s input.msa.trim.fasta -alrt 1000 -bb 1000 -m TEST -nt 4
-# 2m48.720s tested
 
 -s for input
 -arlt for Replicates for SH approximate likelihood ratio test. The SH (Shimodaira-Hasegawa) test is a statistical test used to evaluate the support for different branches in a phylogenetic tree. Don't mind it for now.

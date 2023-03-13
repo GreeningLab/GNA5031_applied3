@@ -1,5 +1,5 @@
 # GNA5031 Applied Session 3
-**Case study - Phylogenetic reconstruction**
+**Instructor's copy for case study - Phylogenetic reconstruction**
 
 ## **1. Background**
 The application of wastewater-based epidemiology (WBE) to support the global response to the COVID-19 pandemic has shown encouraging outcomes. The accurate, sensitive, and high-throughput detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) in municipal wastewater is critical for wastewater-based epidemiology. The orgin the the virus is valuable to inform public health measurements during the global response to the pandemic.
@@ -43,6 +43,7 @@ Example:
 ssh -x gnii0001@gna5031s1-gnii0001-01.rep.monash.edu
 ```
 
+
 ### 3.2 The Monash VPN
 Due to security constraints, our virtual machines can only be accessed from within the Monash network. If you are offsite, you will need to first connect to the Monash Virtual Private Network (VPN). Detailed instructions can be found on the following website:
 https://www.monash.edu/esolutions/network/vpn
@@ -65,13 +66,16 @@ Press **Download ZIP** under **Code** from the following page:
 https://github.com/GreeningLab/GNA5031_applied3.git
 Decompress
 
+
 Install **Seaview** for sequence and alignment visualisation:
 https://doua.prabi.fr/software/seaview
+
 
 Install **Sublime Text 2** for working with text:
 https://www.sublimetext.com/2
 
 **Note**: Not restricted to a single text editor; if you have BBEdit from session, feel free to use it. 
+
 
 ### 4.2 Visualize sequence data using Seaview
 Under filder data_pregenerated:
@@ -88,11 +92,25 @@ Drag and drop `input.msa.trimmed.fasta` into Seaview
 Observe nucleotides and colors. 
 
 
+`input.fasta`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input.png)
+
+`input.msa.fasta`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned.png)
+
+`input.msa.trimmed.fasta`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned_trimmed.png)
+
+
 ### 4.5 Inspect generated phylogenetic tree file using a text editor
 Inspect `input.msa.trimmed.treefile` 
 
 
+`input.msa.trimmed.treefile`
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_tree_file.png)
+
 ## **5. Hands-on component two (virtual machine except last step)** 
+
 **Note**: replace user_name with your own user name in from the following scripts
 
 ### 5.1 access to virutal machine, setting up directory for analysis
@@ -112,48 +130,15 @@ Download course material using `git clone`
 git clone https://github.com/GreeningLab/GNA5031_applied3.git
 ```
 
-Install Mamba, and related softwares
-Mamba is a package manager for the Python programming language that aims to be a faster and more reliable alternative to the popular package manager, conda. Mamba uses the same package and environment specification formats as conda, so it is fully compatible with existing conda environments and packages. In simpler words, it is tool for software installations. 
 
-Need to login again
+The required software is already installed for you in a conda environment. To activate the conda environment type:
 
 ```
-ssh -x user_name@gna5031s1-user_name-01.rep.monash.edu
+conda activate gna5031
 ```
 
-```
-cd ~/GNA5031_applied3/
-mkdir -p tools
-cd tools
-wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh
-bash Mambaforge-$(uname)-$(uname -m).sh -p ~/session3/tools/mamgaforge
+You'll need to do this every time you login.
 
-```
-
-**Note**: yes to all prompts during mamba installation. Also, need to exit and re-login to take effect
-
-```
-exit
-ssh -x user_name@gna5031s1-user_name-01.rep.monash.edu
-```
-
-Create an isolation environment for phylogenetic analysis, install software MAFFT, TrimAL and IQTREE
-
-```
-
-mamba create -y -n phylogenetics
-mamba activate phylogenetics
-mamba install -c bioconda iqtree # press y and enter to confirm changes
-mamba install -c bioconda mafft # press y and enter to confirm changes
-mamba install -c bioconda trimal # press y and enter to confirm changes
-```
-Test whether installation is successful
-```
-iqtree -h
-mafft -h
-trimal -h
-```
-You're ready to go if software information are displayed.
 
 ### 5.2 Align sequences
 
@@ -168,9 +153,10 @@ cd ~/GNA5031_applied3/
 ```
 
 ```
-mafft --preservecase --auto --reorder --thread -1 input.fasta > input.msa.fasta 
-# 14m49.445s tested
+mafft --preservecase --auto --reorder --thread -1 input.fasta > input.msa.fasta
+
 ```
+
 
 ### 5.3 Trim alignment
 Trimming alignment is a common step in the process of inferring phylogenetic trees from molecular sequence data. The main reason for trimming alignment is to remove any poorly aligned or ambiguous regions in the sequence data that may affect the accuracy of the phylogenetic inference.
@@ -178,15 +164,15 @@ Common tools for trimming: trimal (http://trimal.cgenomics.org/)
 
 ```
 trimal -in input.msa.fasta  -out input.msa.trim.fasta -automated1
-# 0m8.611s tested
+
 ```
+
 
 ### 5.4 Phylogenetic inference
 Tree inference, also known as phylogenetic inference, is the process of reconstructing the evolutionary relationships among different organisms or groups of organisms based on their molecular or morphological characteristics. The resulting tree structure is called a phylogenetic tree, and it represents the evolutionary history of the group under study. The goal of tree inference is to reconstruct a tree that best explains the observed similarities and differences among the sequences or traits, while minimizing the number of evolutionary changes required to explain the data. 
 A common tool is IQTREE (http://www.iqtree.org/).
 ```
 iqtree -s input.msa.trim.fasta -alrt 1000 -bb 1000 -m TEST -nt 4
-# 2m48.720s tested
 
 -s for input
 -arlt for Replicates for SH approximate likelihood ratio test. The SH (Shimodaira-Hasegawa) test is a statistical test used to evaluate the support for different branches in a phylogenetic tree. Don't mind it for now.
@@ -200,6 +186,7 @@ When all analysis is done, exit analysis environment and exit virtual machine fo
 mamba activate phylogenetics
 exit
 ```
+
 
 ### 5.5 Visualization of phylogenetic trees (exit virtual machine, return to your own computer)
 
@@ -215,7 +202,6 @@ https://itol.embl.de/
 #### 4.5.1 Obtain the generated tree file 
 
 **Note** use pre_generated file if not ready
-
 For Mac user:
 
 ```
@@ -250,6 +236,7 @@ Explore the following sections:
 
 - What is the meaning of `MW240742.1 rgba(104,2,63,0.7) North America`?
 - What is the meaning of `RFPL_1 rgba(255,215,0,0.7) RFPL_1`?
+
 
 Desired output
 
