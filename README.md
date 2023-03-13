@@ -91,17 +91,6 @@ Observe nucleotides and colors.
 Drag and drop `input.msa.trimmed.fasta` into Seaview
 Observe nucleotides and colors. 
 
-
-`input.fasta`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input.png)
-
-`input.msa.fasta`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned.png)
-
-`input.msa.trimmed.fasta`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned_trimmed.png)
-
-
 ### 4.5 Inspect generated phylogenetic tree file using a text editor
 Inspect `input.msa.trimmed.treefile` 
 
