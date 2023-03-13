@@ -1,10 +1,10 @@
 # GNA5031 Applied Session 3
-**Instructor's copy for case study - Phylogenetic reconstruction**
+**Student's copy for case study - Phylogenetic reconstruction**
 
 ## **1. Background**
-The application of wastewater-based epidemiology (WBE) to support the global response to the COVID-19 pandemic has shown encouraging outcomes. The accurate, sensitive, and high-throughput detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) in municipal wastewater is critical for wastewater-based epidemiology. The orgin the the virus is valuable to inform public health measurements during the global response to the pandemic.
+The application of wastewater-based epidemiology (WBE) to support the global response to the COVID-19 pandemic has shown encouraging outcomes. The accurate, sensitive, and high-throughput detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) in municipal wastewater is critical for wastewater-based epidemiology. The origin the the virus is valuable to inform public health measurements during the global response to the pandemic.
 
-**Previously, we have obtained genomes of SARS-CoV-2 viruses from the wastewater of this passenger flight (de-identified due to confidentiality). In this case study, we will adopte phylogenetic techniques that was discussed during this week's lectures to trace the origin of SARS-CoV-2 using genomes that were obtained from international flights that landed in Brisbane, Australia in winter, 2021. In order to achieve this goal, we will analyze these genomes within unknown origin together with 500 reference genomes with known origin.**
+**In winter 2021, several passengers from an international flight that landed in Brisbane, Australia, tested COVID-19-positive. The health authority suspected that these passengers carried the more virulent SARS-CoV-2 variant(s) that newly emerged in Brazil. The health authority then sent scientists to sample the wastewater in this passenger flight, isolate the corresponding SARS-CoV-2 nucleic acid (de-identified due to confidentiality) and then determine their genome sequences. In this case study, you will adopt phylogenetic techniques that were discussed during this week's lectures to trace the origin of the unknown SARS-CoV-2 variant(s) carried by these passengers. To achieve this goal, you will analyze the SARS-CoV-2 genome sequences derived from the wastewater samples and compare them with 500 reference genomes of known origin.**
 
 ![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/images_large_ez1c00408_0003.jpeg)
 
@@ -21,46 +21,46 @@ At the conclusion of this session, students are expected to:
  - Infer phylogenetic tree using IQTREE
  - Visualize phylogenetic tree using ITOL
 
-## **3. Prerequisite**: 
+## **3. Prior knowledge: Accessing virtual machines and running commands to generate these files**: 
 
 **OBJECTIVES: Complete the following prerequisites, which are essential in following this practiacl session**
 
-### 3.1 Virtual machines (VMs)
+In this course we will make extensive use of cloud computing and virtual machines. You have been provided credentials that will allow you to access these virtual machines 24/7. To access any remote server, we use the terminal and the ssh command. If you are on a mac or linux based PC, you will have a terminal in-built. If you are on a windows-based PC, please download [PuTTY](https://the.earth.li/~sgtatham/putty/latest/w32/putty.exe).
 
-You have been provided credentials that will allow you to access these virtual machines 24/7. To access any remote server, we use the terminal and the ssh command. If you are on a mac or linux based PC, you will have terminal in-built. If you are on a windows-based PC, please download PuTTY.
-To sign up for a VM please enter your name next to a line in this Google Doc: https://docs.google.com/spreadsheets/d/1H9k6jPfAR96m_0iKUA_sbLZEUzDmlME8yHlfLmAKTow/edit?usp=sharing
+You can find the location of your virtual machine in Moodle Under week 2 Applied Session Activities- VM names
 
 **Note**: You cannot share a VM, please jot down your virtual machine credentials.
 
-Accessing virtual machines using **PuTTY** (Windows user)
+### The Monash VPN
+Due to security constraints, our virtual machines can only be accessed from within the Monash network. You will need to first connect to the Monash Virtual Private Network (VPN). Detailed instructions can be found on the [Monash website](https://www.monash.edu/esolutions/network/vpn). Take the time now to install the VPN software and test your connection, this will be imperative for you accessing the VPN while offsite.
 
-If you are using Windows, you will access your virtual machines using PuTTY. In the hostname (or IP address) box, enter the hostname that you were provided. Ensure the connection type is SSH. Click open. You will be prompted to enter your username and password in the terminal window. Enter your credentials and click enter. Note you will not see the characters as they are typed. You are now in your home directory on the VM.
+**FOR INSTRUCTORS: students can connet through VPN.**
 
-Accessing virtual machines using the **terminal** app (Mac user)
+### Accessing virtual machines using PuTTY- Windows
 
-To access your VM using the terminal app on Mac, search for the terminal app using the search bar in the top right-hand corner of your computer. Type the following command following the convention of `ssh username@hostname` where `username` is your username at Monash, and `hostname` is the hostname provided for this course. Click enter, you will be promted for a password. Enter your Monash password and click enter. Note you will not see the characters as they are typed. You are now in your home directory on the VM.
+If you are using Windows you will access your virtual machines using PuTTY.
+PuTTY
+In the hostname (or IP address) box, enter the hostname that you were provided, ie. `gna5031s1-XXXXXXXX-01.rep.monash.edu`, where `XXXXXX` is your authcate . Ensure the connection type is SSH. Click open. You will be prompted to enter your `username` (authcate) and `password` in the terminal window. Enter your credentials and click enter. Note you will not see the characters as they are typed. You are now in your home directory on the VM.
+
+
+### Accessing virtual machines using the terminal app - Mac
+
+To access your VM using the terminal app on Mac, search for the terminal app using the search bar in the top right hand corner of your computer. Type the following command `ssh username@hostname` where username is your authcate and hostname is `gna5031s1-XXXXXXXX-01.rep.monash.edu`, where `XXXXXX` is your authcate. Click enter, you will be asked for a password. Enter your Monash password and click enter. Note you will not see the characters as they are typed. You are now in your home directory on the VM.
 
 Example:
 ```
 ssh -x gnii0001@gna5031s1-gnii0001-01.rep.monash.edu
 ```
 
-### 3.2 The Monash VPN
-Due to security constraints, our virtual machines can only be accessed from within the Monash network. If you are offsite, you will need to first connect to the Monash Virtual Private Network (VPN). Detailed instructions can be found on the following website:
-https://www.monash.edu/esolutions/network/vpn
- 
-Install the VPN software and test your connection.
-
-### 3.3 Register at ITOL
-Note: Please register for a free account prior to the practical session, at:
-https://itol.embl.de/
+### Register at ITOL
+Note: Please register for a free account prior to the practical session, [ITOL](https://itol.embl.de/). This is for rendering a phylogenetic tree that we will generate in this session.
 
 
 ## **4. Hands-on component one** 
 
 **Note** : This is on your local PC (i.e. not with virtual machine)
 
-**OBJECTIVES: Learn to visualize files generated in each step of phylogenetic reconstruction, while facilitate understanding of the entire session.**
+**OBJECTIVES: Learn to visualize files generated in each step of phylogenetic reconstruction, while facilitating understanding of the entire session.**
 
 ### 4.1 Prepare local copy of data.
 
@@ -77,7 +77,7 @@ https://www.sublimetext.com/2
 **Note**: Not restricted to a single text editor; if you have BBEdit from session, feel free to use it. 
 
 ### 4.2 Visualize sequence data using Seaview
-Under filder data_pregenerated:
+Under folder `data_pregenerated`:
 
 Drag and drop `input.fasta` into Seaview
 Observe nucleotides and colors. 
@@ -86,7 +86,7 @@ Observe nucleotides and colors.
 Drag and drop `input.msa.fasta` into Seaview
 Observe nucleotides and colors. 
 
-### 4.4 Visualize aligned and trimed data using Seaview
+### 4.4 Visualize aligned and trimmed data using Seaview
 Drag and drop `input.msa.trimmed.fasta` into Seaview
 Observe nucleotides and colors. 
 
@@ -99,7 +99,7 @@ Inspect `input.msa.trimmed.treefile`
 
 **Note**: replace user_name with your own user name in from the following scripts
 
-### 5.1 access to virutal machine, setting up directory for analysis
+### 5.1 access to virtual machine, setting up directory for analysis
 
 ```
 ssh -x user_name@gna5031s1-user_name-01.rep.monash.edu
@@ -141,7 +141,7 @@ mafft --preservecase --auto --reorder --thread -1 input.fasta > input.msa.fasta
 
 ```
 
-If the above code runs without complains, you have succeeded in this task.
+If the above code runs without complaints, you have succeeded in this task.
 
 ### 5.3 Trim alignment
 Trimming alignment is a common step in the process of inferring phylogenetic trees from molecular sequence data. The main reason for trimming alignment is to remove any poorly aligned or ambiguous regions in the sequence data that may affect the accuracy of the phylogenetic inference.
@@ -153,7 +153,6 @@ trimal -in input.msa.fasta  -out input.msa.trim.fasta -automated1
 ```
 
 If the above code runs without complains, you have succeeded in this task.
-
 
 ### 5.4 Phylogenetic inference
 Tree inference, also known as phylogenetic inference, is the process of reconstructing the evolutionary relationships among different organisms or groups of organisms based on their molecular or morphological characteristics. The resulting tree structure is called a phylogenetic tree, and it represents the evolutionary history of the group under study. The goal of tree inference is to reconstruct a tree that best explains the observed similarities and differences among the sequences or traits, while minimizing the number of evolutionary changes required to explain the data. 
@@ -174,7 +173,7 @@ mamba activate phylogenetics
 exit
 ```
 
-If the above code runs without complains, you have succeeded in this task.
+If the above code runs without complaints, you have succeeded in this task.
 
 ### 5.5 Visualization of phylogenetic trees (exit virtual machine, return to your own computer)
 
@@ -201,7 +200,6 @@ scp user_name@gna5031s1-user_name-01.rep.monash.edu:/GNA5031_applied3/data/input
 
 For Windows user, use the pre-generated tree file - `input.msa.trim.treefile`
 
-
 #### 4.5.2 Upload to ITOL
 Go to ITOL webpage (https://itol.embl.de/)
 press the following: 
@@ -211,13 +209,13 @@ My Trees => Tree upload (drag and drop) => click on `input.msa.trim.treefile` to
 #### 4.5.3 Tree exploration
 After tree being uploaded, explore:
 - circular or rectangular tree format
-- Labels and Lable options
+- Labels and Label options
 - Advanced options
 - Export options
 
-Annotate tree lables with pre-generated file `color.strip.txt`
+Annotate tree labels with pre-generated file `color.strip.txt`
 Explore the following sections:
-- Mandatory settins
+- Mandatory settings
 - Actual data
 
 **Questions**
@@ -230,3 +228,9 @@ Export a pdf file for the rendered tree
 
 Further exploration of tree styles at:
 https://itol.embl.de/gallery.cgi
+
+## **Conclusions** 
+
+The phylogenetic tree shows that the samples we analyzed (yellow branches) are close to virus strains from Asia (pink-ish). And because the flight to Brisbane is from Asia, our result is in agreement with expectation. And this shows that wastewater monitoring of SARS-CoV-2 is a useful tool to show the origin of the virus.
+
+**Question**: where is the likely origin of the viruses we found in this study?
