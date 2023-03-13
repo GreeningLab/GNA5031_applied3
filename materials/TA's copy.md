@@ -9,8 +9,8 @@ The application of wastewater-based epidemiology (WBE) to support the global res
 ![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/materials/images_large_ez1c00408_0003.jpeg)
 
 For more information of wastewater-based analysis of SARS-CoV-2, please refer to:
-- https://pubs.acs.org/doi/full/10.1021/acs.estlett.1c00408
-- https://pubs.acs.org/doi/full/10.1021/acsestwater.2c00083
+- [study one](https://pubs.acs.org/doi/full/10.1021/acs.estlett.1c00408)
+- [study two](https://pubs.acs.org/doi/full/10.1021/acsestwater.2c00083)
 
 **FOR INSTRUCTORS: students can locate these papers through the Monash network.**
 
@@ -76,13 +76,11 @@ Decompress
 
 **FOR INSTRUCTORS: students can download and decompress the specified data files**
 
-Install **Seaview** for sequence and alignment visualisation:
-https://doua.prabi.fr/software/seaview
+Install **Seaview** for sequence and alignment visualisation, [webpage](https://doua.prabi.fr/software/seaview).
 
 **FOR INSTRUCTORS: students can download and install Seaview (Both Windows and Mac versions are available from this website)**
 
-Install **Sublime Text 2** for working with text:
-https://www.sublimetext.com/2
+Install **Sublime Text 2** for working with text, [webpage](https://www.sublimetext.com/2).
 
 **Note**: Not restricted to a single text editor; if you have BBEdit from session, feel free to use it. 
 
@@ -167,12 +165,12 @@ You'll need to do this every time you login.
 
 Sequence alignment is a fundamental step in many bioinformatics applications, including phylogenetic inference and others. It allows us to identify regions of similarity and difference between two or more sequences. By aligning sequences, we can identify conserved regions, mutations, insertions, and deletions, among others. This information is useful for understanding the evolutionary relationships among the sequences, identifying functional domains, and detecting genetic variations that may be associated with disease or other phenotypes.
 
-Common tools for alignment: MAFFT (https://mafft.cbrc.jp/alignment/software/)
+Common tools for alignment: [MAFFT](https://mafft.cbrc.jp/alignment/software/)
 
 Go to data directory
 
 ```
-cd ~/GNA5031_applied3/
+cd ~/GNA5031_applied3/data
 ```
 
 ```
@@ -186,7 +184,7 @@ If the above code runs without complaints, you have succeeded in this task.
 
 ### 5.3 Trim alignment
 Trimming alignment is a common step in the process of inferring phylogenetic trees from molecular sequence data. The main reason for trimming alignment is to remove any poorly aligned or ambiguous regions in the sequence data that may affect the accuracy of the phylogenetic inference.
-Common tools for trimming: trimal (http://trimal.cgenomics.org/)
+Common tools for trimming: [trimal](http://trimal.cgenomics.org/)
 
 ```
 trimal -in input.msa.fasta  -out input.msa.trim.fasta -automated1
@@ -199,7 +197,8 @@ If the above code runs without complains, you have succeeded in this task.
 
 ### 5.4 Phylogenetic inference
 Tree inference, also known as phylogenetic inference, is the process of reconstructing the evolutionary relationships among different organisms or groups of organisms based on their molecular or morphological characteristics. The resulting tree structure is called a phylogenetic tree, and it represents the evolutionary history of the group under study. The goal of tree inference is to reconstruct a tree that best explains the observed similarities and differences among the sequences or traits, while minimizing the number of evolutionary changes required to explain the data. 
-A common tool is IQTREE (http://www.iqtree.org/).
+A common tool is [IQTREE](http://www.iqtree.org/).
+
 ```
 iqtree -s input.msa.trim.fasta -alrt 1000 -bb 1000 -m TEST -nt 4
 
@@ -248,7 +247,7 @@ For Windows user, use the pre-generated tree file - `input.msa.trim.treefile`
 **FOR INSTRUCTORS: help students to obtain either pregenerated or self-generated tree file**
 
 #### 4.5.2 Upload to ITOL
-Go to ITOL webpage (https://itol.embl.de/)
+Go to ITOL [webpage](https://itol.embl.de/)
 press the following: 
 
 My Trees => Tree upload (drag and drop) => click on `input.msa.trim.treefile` to enter the tree
