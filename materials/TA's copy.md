@@ -62,9 +62,7 @@ Note: Please register for a free account prior to the practical session, [ITOL](
 
 **FOR INSTRUCTORS: students can register at ITOL and login with credentials.**
 
-## **4. Hands-on component one** 
-
-**Note** : This is on your local PC (i.e. not with virtual machine)
+## **4. Hands-on component one (on your local PC)** 
 
 **OBJECTIVES: Learn to visualize files generated in each step of phylogenetic reconstruction, while facilitating understanding of the entire session.**
 
@@ -151,7 +149,7 @@ git clone https://github.com/GreeningLab/GNA5031_applied3.git
 
 **FOR INSTRUCTORS: help students run the codes to obtain materials for this section as instructed**
 
-The required software is already installed for you in a conda environment. To activate the conda environment type:
+**Note**: The required software is already installed for you in a conda environment. To activate the conda environment type:
 
 ```
 conda activate gna5031

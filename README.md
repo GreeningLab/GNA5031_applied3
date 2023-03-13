@@ -34,8 +34,6 @@ You can find the location of your virtual machine in Moodle Under week 2 Applied
 ### The Monash VPN
 Due to security constraints, our virtual machines can only be accessed from within the Monash network. You will need to first connect to the Monash Virtual Private Network (VPN). Detailed instructions can be found on the [Monash website](https://www.monash.edu/esolutions/network/vpn). Take the time now to install the VPN software and test your connection, this will be imperative for you accessing the VPN while offsite.
 
-**FOR INSTRUCTORS: students can connet through VPN.**
-
 ### Accessing virtual machines using PuTTY- Windows
 
 If you are using Windows you will access your virtual machines using PuTTY.
@@ -56,9 +54,7 @@ ssh -x gnii0001@gna5031s1-gnii0001-01.rep.monash.edu
 Note: Please register for a free account prior to the practical session, [ITOL](https://itol.embl.de/). This is for rendering a phylogenetic tree that we will generate in this session.
 
 
-## **4. Hands-on component one** 
-
-**Note** : This is on your local PC (i.e. not with virtual machine)
+## **4. Hands-on component one (on your local PC)** 
 
 **OBJECTIVES: Learn to visualize files generated in each step of phylogenetic reconstruction, while facilitating understanding of the entire session.**
 
@@ -114,7 +110,7 @@ Download course material using `git clone`
 git clone https://github.com/GreeningLab/GNA5031_applied3.git
 ```
 
-The required software is already installed for you in a conda environment. To activate the conda environment type:
+**Note**: The required software is already installed for you in a conda environment. To activate the conda environment type:
 
 ```
 conda activate gna5031
