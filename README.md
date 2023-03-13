@@ -2,7 +2,7 @@
 **Student's copy for case study - Phylogenetic reconstruction**
 
 ## **1. Background**
-The application of wastewater-based epidemiology (WBE) to support the global response to the COVID-19 pandemic has shown encouraging outcomes. The accurate, sensitive, and high-throughput detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) in municipal wastewater is critical for wastewater-based epidemiology. The origin the the virus is valuable to inform public health measurements during the global response to the pandemic.
+The application of wastewater-based epidemiology (WBE) to support the global response to the COVID-19 pandemic has shown encouraging outcomes. The accurate, sensitive, and high-throughput detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) in municipal wastewater is critical for wastewater-based epidemiology. The origin the virus is valuable to inform public health measurements during the global response to the pandemic.
 
 **In winter 2021, several passengers from an international flight that landed in Brisbane, Australia, tested COVID-19-positive. The health authority suspected that these passengers carried the more virulent SARS-CoV-2 variant(s) that newly emerged in Brazil. The health authority then sent scientists to sample the wastewater in this passenger flight, isolate the corresponding SARS-CoV-2 nucleic acid (de-identified due to confidentiality) and then determine their genome sequences. In this case study, you will adopt phylogenetic techniques that were discussed during this week's lectures to trace the origin of the unknown SARS-CoV-2 variant(s) carried by these passengers. To achieve this goal, you will analyze the SARS-CoV-2 genome sequences derived from the wastewater samples and compare them with 500 reference genomes of known origin.**
 
@@ -224,8 +224,7 @@ Export a pdf file for the rendered tree
 Further exploration of tree styles at:
 https://itol.embl.de/gallery.cgi
 
-## **Conclusions** 
-
-The phylogenetic tree shows that the samples we analyzed (yellow branches) are close to virus strains from Asia (pink-ish). And because the flight to Brisbane is from Asia, our result is in agreement with expectation. And this shows that wastewater monitoring of SARS-CoV-2 is a useful tool to show the origin of the virus.
-
-**Question**: where is the likely origin of the viruses we found in this study?
+**Questions**: 
+- Where is the likely origin of the viruses we found in this study?
+- Are the SARS-CoV-2 variants carried by the passengers likely to have originated from the 2021 COVID-19 outbreak in Brazil as initially suspected?
+- Is wastewater monitoring of SARS-CoV-2 a useful tool to trace the origin of the viruses?

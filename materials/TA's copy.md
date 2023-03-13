@@ -287,6 +287,6 @@ https://itol.embl.de/gallery.cgi
 
 ## **Conclusions** 
 
-The phylogenetic tree shows that the samples we analyzed (yellow branches) are close to virus strains from Asia (pink-ish). And because the flight to Brisbane is from Asia, our result is in agreement with expectation. And this shows that wastewater monitoring of SARS-CoV-2 is a useful tool to show the origin of the virus.
+Despite the emergence of new variants from Brazil; our phylogenetic study shows that they likely have transmitted in Asia before entering Australia. The yellow branches - our samples are close to virus strains from Asia (pink-ish). And because the flight to Brisbane is from Asia, our result is in agreement with expectation. And this shows that wastewater monitoring of SARS-CoV-2 is a useful tool to show the origin of the virus.
 
 **Question**: where is the likely origin of the viruses we found in this study?
