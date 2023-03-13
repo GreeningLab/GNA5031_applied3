@@ -6,7 +6,7 @@ The application of wastewater-based epidemiology (WBE) to support the global res
 
 **In winter 2021, several passengers from an international flight that landed in Brisbane, Australia, tested COVID-19-positive. The health authority suspected that these passengers carried the more virulent SARS-CoV-2 variant(s) that newly emerged in Brazil. The health authority then sent scientists to sample the wastewater in this passenger flight, isolate the corresponding SARS-CoV-2 nucleic acid (de-identified due to confidentiality) and then determine their genome sequences. In this case study, you will adopt phylogenetic techniques that were discussed during this week's lectures to trace the origin of the unknown SARS-CoV-2 variant(s) carried by these passengers. To achieve this goal, you will analyze the SARS-CoV-2 genome sequences derived from the wastewater samples and compare them with 500 reference genomes of known origin.**
 
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/images_large_ez1c00408_0003.jpeg)
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/materials/images_large_ez1c00408_0003.jpeg)
 
 For more information of wastewater-based analysis of SARS-CoV-2, please refer to:
 - https://pubs.acs.org/doi/full/10.1021/acs.estlett.1c00408
@@ -107,13 +107,13 @@ Observe nucleotides and colors.
 If you see the following, it has worked.
 
 `input.fasta`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input.png)
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/materials/example_input.png)
 
 `input.msa.fasta`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned.png)
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/materials/example_input_aligned.png)
 
 `input.msa.trimmed.fasta`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_input_aligned_trimmed.png)
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/materials/example_input_aligned_trimmed.png)
 
 
 ### 4.5 Inspect generated phylogenetic tree file using a text editor
@@ -124,7 +124,7 @@ If you see the following, it has worked.
 **FOR INSTRUCTORS: help students to open this treefile with a text editor**
 
 `input.msa.trimmed.treefile`
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_tree_file.png)
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/materials/example_tree_file.png)
 
 ## **5. Hands-on component two (virtual machine except last step)** 
 
@@ -278,7 +278,7 @@ Explore the following sections:
 
 Desired output
 
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/example_phylogenetic_tree.png)
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/materials/example_phylogenetic_tree.png)
 
 #### 4.5.4 Figure export
 Export a pdf file for the rendered tree

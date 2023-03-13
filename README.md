@@ -6,7 +6,7 @@ The application of wastewater-based epidemiology (WBE) to support the global res
 
 **In winter 2021, several passengers from an international flight that landed in Brisbane, Australia, tested COVID-19-positive. The health authority suspected that these passengers carried the more virulent SARS-CoV-2 variant(s) that newly emerged in Brazil. The health authority then sent scientists to sample the wastewater in this passenger flight, isolate the corresponding SARS-CoV-2 nucleic acid (de-identified due to confidentiality) and then determine their genome sequences. In this case study, you will adopt phylogenetic techniques that were discussed during this week's lectures to trace the origin of the unknown SARS-CoV-2 variant(s) carried by these passengers. To achieve this goal, you will analyze the SARS-CoV-2 genome sequences derived from the wastewater samples and compare them with 500 reference genomes of known origin.**
 
-![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/figures/images_large_ez1c00408_0003.jpeg)
+![alt](https://github.com/GreeningLab/GNA5031_applied3/blob/main/materials/images_large_ez1c00408_0003.jpeg)
 
 For more information of wastewater-based analysis of SARS-CoV-2, please refer to:
 - https://pubs.acs.org/doi/full/10.1021/acs.estlett.1c00408
