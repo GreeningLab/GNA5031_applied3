@@ -285,8 +285,11 @@ https://itol.embl.de/gallery.cgi
 
 **FOR INSTRUCTORS: help students to explore, annotate and export the tree.**
 
+**Questions**: 
+- Where is the likely origin of the viruses we found in this study?
+- Are the SARS-CoV-2 variants carried by the passengers likely to have originated from the 2021 COVID-19 outbreak in Brazil as initially suspected?
+- Is wastewater monitoring of SARS-CoV-2 a useful tool to trace the origin of the viruses?
+
 ## **Conclusions** 
 
 Despite the emergence of new variants from Brazil; our phylogenetic study shows that they likely have transmitted in Asia before entering Australia. The yellow branches - our samples are close to virus strains from Asia (pink-ish). And because the flight to Brisbane is from Asia, our result is in agreement with expectation. And this shows that wastewater monitoring of SARS-CoV-2 is a useful tool to show the origin of the virus.
-
-**Question**: where is the likely origin of the viruses we found in this study?
