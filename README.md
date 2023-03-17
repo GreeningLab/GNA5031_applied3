@@ -164,7 +164,7 @@ iqtree -s input.msa.trim.fasta -alrt 1000 -bb 1000 -m TEST -nt 4
 
 When all analysis is done, exit analysis environment and exit virtual machine for good practice
 ```
-mamba activate phylogenetics
+conda deactivate
 exit
 ```
 
